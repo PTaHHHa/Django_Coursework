@@ -25,6 +25,7 @@ urlpatterns = [
     path('', views.index, name="index"),
     path('profile/', views.user_profile, name="profile"),
     path('profile/update/', views.update_profile, name="update"),
+    path('profile/delete',views.delete_profile, name="delete"),
     path('', include('allauth.urls'))
 ]
 if settings.DEBUG:

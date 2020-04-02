@@ -1,5 +1,6 @@
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth import logout
 from django.shortcuts import render, redirect
 from Bank.models import Profile
 from Bank.forms import ProfileForm, ImageForm
@@ -28,7 +29,7 @@ def update_profile(request):
                 messages.success(request, f'Your account has been updated')
                 return redirect('profile')
     else:
-        messages.error(request, f'You should login first')
+        messages.error(request, 'You should login first')
         return redirect('index')
     return render(request, "../templates/update_profile.html", {'form': form})
 
@@ -36,3 +37,11 @@ def update_profile(request):
 @login_required
 def user_profile(request):
     return render(request, "../templates/profile.html")
+
+
+def delete_profile(request):
+    b = Profile.objects.get(user=request.user)
+    b.delete()
+    logout(request)
+    messages.success(request, 'Account was successfully deleted')
+    return render(request, '../templates/base.html')

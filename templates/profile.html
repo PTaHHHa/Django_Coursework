@@ -2,6 +2,8 @@
 <html lang="en">
 {% load static %}
 <head>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.js"></script>
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -40,7 +42,6 @@
                                 <p>{{request.user.profile.family}}</p>
                             </h6>
                                 <p class="proile-rating">Birth date : <span>{{ request.user.profile.birth_date}}</span></p>
-                                <p class="proile-rating">Date joined : <span>{{ request.user.date_joined}}</span></p>
                             <ul class="nav nav-tabs" id="myTab" role="tablist">
                                 <li class="nav-item">
                                     <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">About</a>
@@ -54,6 +55,7 @@
                     <div class="col-md-2">
                         <a href="{% url 'update'%}" class="btn btn-primary btn-lg enabled" role="button" aria-disabled="true">Edit Profile</a><br>
                         <a href="{% url 'account_logout'%}" class="btn btn-primary btn-lg enabled" role="button" aria-disabled="true">Logout</a>
+                        <a href="{% url 'delete'%}" class="btn btn-primary btn-lg enabled" role="button" aria-disabled="true">Delete</a>
                     </div>
                 </div>
                 <div class="row">
@@ -108,10 +110,10 @@
                                         </div>
                                         <div class="row">
                                             <div class="col-md-6">
-                                                <label>Profession</label>
+                                                <label>Mobile phone</label>
                                             </div>
                                             <div class="col-md-6">
-                                                <p>Web Developer and Designer</p>
+                                                <p>{{ request.user.profile.mobile_phone }}</p>
                                             </div>
                                         </div>
                             </div>
