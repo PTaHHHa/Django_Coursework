@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django import forms
-from Bank.models import Profile
+from Bank.models import Profile, Deposits, Account
 
 
 class DateInput(forms.DateInput):
@@ -36,3 +36,26 @@ class ImageForm(forms.ModelForm):
 
 class ProfileAdmin(admin.ModelAdmin):
     form = ProfileForm
+
+
+class AccountForm(forms.ModelForm):
+    class Meta:
+        model = Account
+        fields = '__all__'
+        exclude = ['profile']
+
+
+class DepositForm(forms.ModelForm):
+    class Meta:
+        model = Deposits
+        fields = '__all__'
+        exclude = ['profile']
+
+
+class AccountAdmin(admin.ModelAdmin):
+    form = AccountForm
+
+
+class DepositAdmin(admin.ModelAdmin):
+    form = DepositForm
+

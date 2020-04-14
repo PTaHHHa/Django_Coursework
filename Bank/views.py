@@ -3,7 +3,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth import logout
 from django.shortcuts import render, redirect
 from Bank.models import Profile
-from Bank.forms import ProfileForm, ImageForm
+from Bank.forms import ProfileForm, ImageForm, DepositForm, AccountForm
 
 # Create your views here.
 
@@ -45,3 +45,22 @@ def delete_profile(request):
     logout(request)
     messages.success(request, 'Account was successfully deleted')
     return render(request, '../templates/base.html')
+
+
+def account_profile(request):
+    if request.user.is_authenticated:
+        if request.method == "POST":
+            p = request.user.profile
+            account = AccountForm(request.POST, instance=p.account)
+            if account.is_valid():
+                account.save()
+                return redirect('profile')
+        else:
+            account = AccountForm()
+            return render(request, "../templates/account_profile.html", {'account': account})
+    else:
+        messages.error(request, 'You should login first')
+        return redirect('index')
+
+
+

@@ -2,6 +2,8 @@ from django.db import models
 from django.contrib.auth.models import User
 import datetime
 from PIL import Image
+from django.db.models.signals import post_save
+
 
 # Create your models here.
 
@@ -97,3 +99,37 @@ class Citizenship(models.Model):
 
     def __str__(self):
         return self.citizenship
+
+
+class Account(models.Model):
+    profile = models.OneToOneField(Profile, on_delete=models.CASCADE)
+    current_balance = models.DecimalField(max_digits=10, decimal_places=2, blank=True, unique=False, default=0)
+
+    def __str__(self):
+        return str(self.profile.last_name + " " + self.profile.first_name)
+
+
+class Deposits(models.Model):
+
+    DEPOSIT_TYPE = (
+        ("7.5% на 45 дней", "7.5% на 45 дней"),
+    )
+
+    profile = models.OneToOneField(Profile, on_delete=models.CASCADE)
+    deposit_type = models.CharField(max_length=900, choices=DEPOSIT_TYPE, null=False, default=0)
+    deposit_value = models.IntegerField(null=True, blank=False)
+
+    class Meta:
+        verbose_name_plural = "Deposits"
+
+    def __str__(self):
+        return str(self.profile.last_name + " " + self.profile.first_name)
+
+
+def create_signal(sender, instance, created, **kwargs):
+    if created:
+        account = Account.objects.create(profile=instance)
+        deposit = Deposits.objects.create(profile=instance)
+
+
+post_save.connect(create_signal, sender=Profile)
