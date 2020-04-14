@@ -19,11 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="44d71a1a-eea2-49a2-ac86-eaa40d50ef7f" name="Default Changelist" comment="added funds to your personal account method was added and deposit model in models">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-    </list>
+    <list default="true" id="44d71a1a-eea2-49a2-ac86-eaa40d50ef7f" name="Default Changelist" comment="added funds to your personal account method was added and deposit model in models" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -119,7 +115,7 @@
       <workItem from="1586863622435" duration="2154000" />
       <workItem from="1586865981801" duration="7391000" />
       <workItem from="1586874733813" duration="434000" />
-      <workItem from="1586875187261" duration="3948000" />
+      <workItem from="1586875187261" duration="3991000" />
     </task>
     <task id="LOCAL-00001" summary="added funds to your personal account method was added and deposit model in models">
       <created>1586878672496</created>
@@ -128,7 +124,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586878672496</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="added funds to your personal account method was added and deposit model in models">
+      <created>1586879179030</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1586879179030</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -167,22 +170,22 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="635" y="231" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1586878820700" />
-    <state width="1877" height="288" key="GridCell.Tab.0.bottom" timestamp="1586879089575">
+    <state width="1877" height="288" key="GridCell.Tab.0.bottom" timestamp="1586879199034">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="288" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1586879089575" />
-    <state width="1877" height="288" key="GridCell.Tab.0.center" timestamp="1586879089575">
+    <state width="1877" height="288" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1586879199034" />
+    <state width="1877" height="288" key="GridCell.Tab.0.center" timestamp="1586879199034">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="288" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1586879089575" />
-    <state width="1877" height="288" key="GridCell.Tab.0.left" timestamp="1586879089575">
+    <state width="1877" height="288" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1586879199034" />
+    <state width="1877" height="288" key="GridCell.Tab.0.left" timestamp="1586879199034">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="288" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1586879089575" />
-    <state width="1877" height="288" key="GridCell.Tab.0.right" timestamp="1586879089575">
+    <state width="1877" height="288" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1586879199034" />
+    <state width="1877" height="288" key="GridCell.Tab.0.right" timestamp="1586879199034">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="288" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1586879089575" />
+    <state width="1877" height="288" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1586879199034" />
     <state width="209" height="539" key="HiddenNamespacesPopup" timestamp="1586878857005">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
