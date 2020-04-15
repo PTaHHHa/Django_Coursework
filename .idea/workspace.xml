@@ -19,7 +19,16 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="44d71a1a-eea2-49a2-ac86-eaa40d50ef7f" name="Default Changelist" comment="added funds to your personal account method was added and deposit model in models" />
+    <list default="true" id="44d71a1a-eea2-49a2-ac86-eaa40d50ef7f" name="Default Changelist" comment="added funds to your personal account method was added and deposit model in models">
+      <change beforePath="$PROJECT_DIR$/.idea/coursework.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/coursework.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bank/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Bank/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bank/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Bank/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coursework/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/coursework/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/profile.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -38,6 +47,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitRewordedCommitMessages">
+    <option name="onto" value="d757ece2ada2445a1ef5c6ae87c55f00ba4605f2" />
   </component>
   <component name="ProjectId" id="1ZG8kZjBXN0ZCbrzyscgxJbsGPN" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -116,6 +128,9 @@
       <workItem from="1586865981801" duration="7391000" />
       <workItem from="1586874733813" duration="434000" />
       <workItem from="1586875187261" duration="3991000" />
+      <workItem from="1586879683749" duration="343000" />
+      <workItem from="1586949868559" duration="3631000" />
+      <workItem from="1586957169157" duration="17173000" />
     </task>
     <task id="LOCAL-00001" summary="added funds to your personal account method was added and deposit model in models">
       <created>1586878672496</created>
@@ -170,22 +185,26 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="635" y="231" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1586878820700" />
-    <state width="1877" height="288" key="GridCell.Tab.0.bottom" timestamp="1586879199034">
+    <state x="452" y="223" key="Git.Interactive.Rebase.Dialog" timestamp="1586879909902">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="288" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1586879199034" />
-    <state width="1877" height="288" key="GridCell.Tab.0.center" timestamp="1586879199034">
+    <state x="452" y="223" key="Git.Interactive.Rebase.Dialog/0.0.1920.1080@0.0.1920.1080" timestamp="1586879909902" />
+    <state width="1877" height="288" key="GridCell.Tab.0.bottom" timestamp="1586975917419">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="288" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1586879199034" />
-    <state width="1877" height="288" key="GridCell.Tab.0.left" timestamp="1586879199034">
+    <state width="1877" height="288" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1586975917419" />
+    <state width="1877" height="288" key="GridCell.Tab.0.center" timestamp="1586975917419">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="288" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1586879199034" />
-    <state width="1877" height="288" key="GridCell.Tab.0.right" timestamp="1586879199034">
+    <state width="1877" height="288" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1586975917419" />
+    <state width="1877" height="288" key="GridCell.Tab.0.left" timestamp="1586975917418">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="288" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1586879199034" />
+    <state width="1877" height="288" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1586975917418" />
+    <state width="1877" height="288" key="GridCell.Tab.0.right" timestamp="1586975917419">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1877" height="288" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1586975917419" />
     <state width="209" height="539" key="HiddenNamespacesPopup" timestamp="1586878857005">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -194,9 +213,21 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="461" y="185" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1586864421412" />
-    <state x="623" y="259" width="672" height="678" key="search.everywhere.popup" timestamp="1586863767494">
+    <state x="762" y="450" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1586964957870">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="623" y="259" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1586863767494" />
+    <state x="762" y="450" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1080@0.0.1920.1080" timestamp="1586964957870" />
+    <state x="712" y="319" key="git4idea.merge.GitMergeDialog" timestamp="1586879887287">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="712" y="319" key="git4idea.merge.GitMergeDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1586879887287" />
+    <state x="743" y="382" key="git4idea.rebase.GitRebaseDialog" timestamp="1586879902869">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="743" y="382" key="git4idea.rebase.GitRebaseDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1586879902869" />
+    <state x="623" y="259" width="672" height="678" key="search.everywhere.popup" timestamp="1586879896970">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="623" y="259" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1586879896970" />
   </component>
 </project>

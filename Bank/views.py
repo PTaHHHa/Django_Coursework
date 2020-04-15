@@ -2,11 +2,13 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import logout
 from django.shortcuts import render, redirect
-from Bank.models import Profile
+from Bank.models import Profile, Deposits, Account
 from Bank.forms import ProfileForm, ImageForm, DepositForm, AccountForm
+from time import sleep
+from datetime import datetime
 
 # Create your views here.
-
+global  deposit_creating_time
 
 def index(request):
     return render(request, "../templates/base.html")
@@ -63,4 +65,42 @@ def account_profile(request):
         return redirect('index')
 
 
+def deposit(request):
+    if request.user.is_authenticated:
+        if request.method == "POST":
+            p = request.user.profile
+            deposit_form = DepositForm(request.POST, instance=p.deposits)
 
+            if deposit_form.is_valid():
+                account_object = Account.objects.get(id=p.account.id)
+                account_value_object = getattr(account_object, 'current_balance')
+                deposit_value_object = deposit_form.cleaned_data['deposit_value']
+                if deposit_value_object == 0:
+                    print("zero")
+                    return redirect('profile')
+                elif deposit_value_object > account_value_object:
+                    messages.error(request, "You don't have enough money to make a deposit!")
+                    return redirect('profile')
+                else:
+                    deposit_form.save()
+                    account_object.current_balance = account_value_object - deposit_value_object
+                    account_object.save()
+
+                    messages.success(request, 'Deposit created')
+
+                    """ПРОРАБОТАТЬ ФУНКЦИОНАЛ ДЛЯ ДАТЫ В deposit_counter()"""
+                    deposit_creating_time = datetime.today()
+                    date_formatted = deposit_creating_time.strftime('%d/%m/%Y')
+                    print(date_formatted)
+
+                    return redirect('profile')
+        else:
+            deposit_form = DepositForm()
+            return render(request, "../templates/deposit_form.html", {'deposit_form': deposit_form})
+    else:
+        messages.error(request, 'You should login first')
+        return redirect('index')
+
+
+def deposit_counter():
+    pass

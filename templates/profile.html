@@ -7,6 +7,7 @@
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
     <link href="{% static "css/user_profile.css" %}" rel="stylesheet" type="text/css">
     <meta charset="UTF-8">
     <title>Title</title>
@@ -21,6 +22,16 @@
     <div class="container emp-profile">
             <form method="post" enctype="multipart/form-data">
                 {% csrf_token %}
+                    {% if messages %}
+            {% for message in messages %}
+                <div {% if message.tags == 'success' %} class="alert alert-success"
+                            {% elif message.tags == 'error' %}
+                                                        class="alert alert-danger"
+                            {% endif %} role="alert">
+                    {{ message }}
+                </div>
+            {% endfor %}
+        {% endif %}
                 <div class="row">
                     <div class="col-md-4">
                         <div class="profile-img">
@@ -47,9 +58,9 @@
                                     <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Personal info</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Account info</a>
+                                    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#account" role="tab" aria-controls="profile" aria-selected="false">Account info</a>
                                 </li><li class="nav-item">
-                                    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Deposits and loans</a>
+                                    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#deposit" role="tab" aria-controls="profile" aria-selected="false">Deposits and loans</a>
                                 </li>
                             </ul>
                         </div>
@@ -65,7 +76,7 @@
                         <div class="profile-work">
                             <p>Email</p>
                             <a href="">{{ request.user.email }}</a><br/>
-                            <a href="">Bootsnipp Profile</a><br/>
+                            <a href="">{{ request.user.profile.invalid}}</a><br/>
                             <a href="">Bootply Profile</a>
                             <p>SKILLS</p>
                             <a href="">Web Designer</a><br/>
@@ -119,7 +130,7 @@
                                             </div>
                                         </div>
                             </div>
-                            <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                            <div class="tab-pane fade" id="account" role="tabpanel" aria-labelledby="profile-tab">
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <label>Account balance</label>
@@ -130,12 +141,41 @@
                                         </div>
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <label>Add cash</label>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <button type="submit"><a href="{% url 'account'%}">POST</a></button>
+                                        <button type="submit"><a href="{% url 'account'%}">Add cash</a></button>
                                     </div>
                                 </div>
+                            </div>
+                            <div class="tab-pane fade" id="deposit" role="tabpanel" aria-labelledby="profile-tab">
+                                {% if request.user.profile.deposits.deposit_value == 0 %}
+                                    <div class="row">
+                                            <div class="col-md-6">
+                                                <label>You don't have a deposit</label>
+                                            </div>
+                                        </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <button type="submit"><a href="{% url 'deposit_form'%}">Create a deposit</a></button>
+                                        </div>
+                                    </div>
+                                {% else %}
+                                    <div class="row">
+                                    <div class="col-md-6">
+                                     <label>Deposit balance</label>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                     <p>{{ request.user.profile.deposits.deposit_value }} руб.</p>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <label>Deposit type</label>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <p>{{ request.user.profile.deposits.deposit_type }}</p>
+                                    </div>
+                                </div>
+                                {% endif %}
                             </div>
                         </div>
                     </div>
