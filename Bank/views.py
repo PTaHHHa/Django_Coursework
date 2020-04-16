@@ -4,11 +4,12 @@ from django.contrib.auth import logout
 from django.shortcuts import render, redirect
 from Bank.models import Profile, Deposits, Account
 from Bank.forms import ProfileForm, ImageForm, DepositForm, AccountForm
-from time import sleep
-from datetime import datetime
+from datetime import datetime, date
 
 # Create your views here.
-global  deposit_creating_time
+tax = 0.13
+global deposit_creating_time
+
 
 def index(request):
     return render(request, "../templates/base.html")
@@ -38,6 +39,7 @@ def update_profile(request):
 
 @login_required
 def user_profile(request):
+    deposit_counter(request)
     return render(request, "../templates/profile.html")
 
 
@@ -75,8 +77,8 @@ def deposit(request):
                 account_object = Account.objects.get(id=p.account.id)
                 account_value_object = getattr(account_object, 'current_balance')
                 deposit_value_object = deposit_form.cleaned_data['deposit_value']
-                if deposit_value_object == 0:
-                    print("zero")
+                if deposit_value_object <= 100:
+                    messages.error(request, 'Minimal deposit value 100 руб.')
                     return redirect('profile')
                 elif deposit_value_object > account_value_object:
                     messages.error(request, "You don't have enough money to make a deposit!")
@@ -89,9 +91,9 @@ def deposit(request):
                     messages.success(request, 'Deposit created')
 
                     """ПРОРАБОТАТЬ ФУНКЦИОНАЛ ДЛЯ ДАТЫ В deposit_counter()"""
-                    deposit_creating_time = datetime.today()
-                    date_formatted = deposit_creating_time.strftime('%d/%m/%Y')
-                    print(date_formatted)
+                    deposit_creating_time = date.today()
+                    Deposits.objects.update(date=deposit_creating_time)
+                    print(deposit_creating_time)
 
                     return redirect('profile')
         else:
@@ -102,5 +104,8 @@ def deposit(request):
         return redirect('index')
 
 
-def deposit_counter():
-    pass
+def deposit_counter(request):
+    deposit_object = Deposits.objects.get(id=request.user.profile.deposits.id)
+    deposit_value_object = getattr(deposit_object, 'deposit_value')
+    print(deposit_value_object)
+

@@ -112,12 +112,17 @@ class Account(models.Model):
 class Deposits(models.Model):
 
     DEPOSIT_TYPE = (
-        ("под 7.5% на 45 дней", "под 7.5% на 45 дней"),
+            ("под 7.51% на 45 дней", "под 7.51% на 45 дней"),
+            ("под 8.56% на 95 дней", "под 8.56% на 95 дней"),
+            ("под 8.64% на 185 дней", "под 8.64% на 185 дней"),
+            ("под 8.87% на 385 дней", "под 8.87% на 385 дней"),
+            ("под 9.25% на 735 дней", "под 9.25% на 735 дней"),
     )
 
     profile = models.OneToOneField(Profile, on_delete=models.CASCADE)
     deposit_type = models.CharField(max_length=900, choices=DEPOSIT_TYPE, null=False, default=1)
-    deposit_value = models.IntegerField(blank=True, unique=False, default=0)
+    current_balance = models.DecimalField(max_digits=10, decimal_places=2, blank=False, unique=False, default=0, null=False)
+    date = models.DateField(blank=False, default=datetime.date.today, editable=False)
 
     class Meta:
         verbose_name_plural = "Deposits"

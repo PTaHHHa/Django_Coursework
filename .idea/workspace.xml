@@ -16,16 +16,23 @@
         <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </expand>
-    <select />
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="44d71a1a-eea2-49a2-ac86-eaa40d50ef7f" name="Default Changelist" comment="added funds to your personal account method was added and deposit model in models">
-      <change beforePath="$PROJECT_DIR$/.idea/coursework.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/coursework.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+    <list default="true" id="44d71a1a-eea2-49a2-ac86-eaa40d50ef7f" name="Default Changelist" comment="squash! 'make a deposit' functional + funds withdrawal from account added">
+      <change afterPath="$PROJECT_DIR$/Bank/migrations/0007_auto_20200415_1718.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Bank/migrations/0008_auto_20200415_1838.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Bank/migrations/0009_auto_20200415_2000.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Bank/migrations/0010_deposits_date.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Bank/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Bank/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Bank/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Bank/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coursework/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/coursework/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/profile.html" afterDir="false" />
     </list>
@@ -46,18 +53,26 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="3977c8ec37e90b44b02b27bf52863de6abd4f73b" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitRewordedCommitMessages">
     <option name="onto" value="d757ece2ada2445a1ef5c6ae87c55f00ba4605f2" />
   </component>
   <component name="ProjectId" id="1ZG8kZjBXN0ZCbrzyscgxJbsGPN" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
@@ -131,6 +146,9 @@
       <workItem from="1586879683749" duration="343000" />
       <workItem from="1586949868559" duration="3631000" />
       <workItem from="1586957169157" duration="17173000" />
+      <workItem from="1586977184200" duration="232000" />
+      <workItem from="1587040818465" duration="1477000" />
+      <workItem from="1587049648024" duration="7709000" />
     </task>
     <task id="LOCAL-00001" summary="added funds to your personal account method was added and deposit model in models">
       <created>1586878672496</created>
@@ -165,8 +183,11 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="added funds to your personal account method was added and deposit model in models" />
-    <option name="LAST_COMMIT_MESSAGE" value="added funds to your personal account method was added and deposit model in models" />
+    <MESSAGE value="'make a deposit' functional + funds withdrawal from account added" />
+    <MESSAGE value="Revert &quot;'make a deposit' functional + funds withdrawal from account added&quot;&#10;&#10;This reverts commit 3977c8ec" />
+    <option name="LAST_COMMIT_MESSAGE" value="Revert &quot;'make a deposit' functional + funds withdrawal from account added&quot;&#10;&#10;This reverts commit 3977c8ec" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="181" key="#Plugins" timestamp="1586863608735">
@@ -181,30 +202,38 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="664" y="125" key="#coursework/0.0.1920.1080@0.0.1920.1080" timestamp="1586864893193" />
+    <state x="511" y="40" key="CommitChangelistDialog2" timestamp="1586977301089">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="511" y="40" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1586977301089" />
+    <state x="92" y="92" width="1736" height="896" key="DiffContextDialog" timestamp="1586977357711">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="92" y="92" width="1736" height="896" key="DiffContextDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1586977357711" />
     <state x="635" y="231" key="FileChooserDialogImpl" timestamp="1586878820700">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="635" y="231" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1586878820700" />
-    <state x="452" y="223" key="Git.Interactive.Rebase.Dialog" timestamp="1586879909902">
+    <state x="452" y="223" key="Git.Interactive.Rebase.Dialog" timestamp="1586977275345">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="452" y="223" key="Git.Interactive.Rebase.Dialog/0.0.1920.1080@0.0.1920.1080" timestamp="1586879909902" />
-    <state width="1877" height="288" key="GridCell.Tab.0.bottom" timestamp="1586975917419">
+    <state x="452" y="223" key="Git.Interactive.Rebase.Dialog/0.0.1920.1080@0.0.1920.1080" timestamp="1586977275345" />
+    <state width="1877" height="288" key="GridCell.Tab.0.bottom" timestamp="1587056815053">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="288" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1586975917419" />
-    <state width="1877" height="288" key="GridCell.Tab.0.center" timestamp="1586975917419">
+    <state width="1877" height="288" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1587056815053" />
+    <state width="1877" height="288" key="GridCell.Tab.0.center" timestamp="1587056815052">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="288" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1586975917419" />
-    <state width="1877" height="288" key="GridCell.Tab.0.left" timestamp="1586975917418">
+    <state width="1877" height="288" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1587056815052" />
+    <state width="1877" height="288" key="GridCell.Tab.0.left" timestamp="1587056815052">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="288" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1586975917418" />
-    <state width="1877" height="288" key="GridCell.Tab.0.right" timestamp="1586975917419">
+    <state width="1877" height="288" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1587056815052" />
+    <state width="1877" height="288" key="GridCell.Tab.0.right" timestamp="1587056815052">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="288" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1586975917419" />
+    <state width="1877" height="288" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1587056815052" />
     <state width="209" height="539" key="HiddenNamespacesPopup" timestamp="1586878857005">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -213,10 +242,22 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="461" y="185" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1586864421412" />
+    <state x="552" y="269" key="Vcs.Push.Dialog.v2" timestamp="1586977359746">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="552" y="269" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1586977359746" />
+    <state x="631" y="192" key="VcsDiffUtil.ChangesDialog" timestamp="1586976815215">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="631" y="192" key="VcsDiffUtil.ChangesDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1586976815215" />
     <state x="762" y="450" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1586964957870">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="762" y="450" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1080@0.0.1920.1080" timestamp="1586964957870" />
+    <state x="724" y="171" key="git4idea.branch.GitSmartOperationDialog" timestamp="1586977239267">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="724" y="171" key="git4idea.branch.GitSmartOperationDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1586977239267" />
     <state x="712" y="319" key="git4idea.merge.GitMergeDialog" timestamp="1586879887287">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
