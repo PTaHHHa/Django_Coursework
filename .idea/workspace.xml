@@ -19,22 +19,17 @@
     <select>
       <path>
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:master" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="44d71a1a-eea2-49a2-ac86-eaa40d50ef7f" name="Default Changelist" comment="squash! 'make a deposit' functional + funds withdrawal from account added">
-      <change afterPath="$PROJECT_DIR$/Bank/migrations/0007_auto_20200415_1718.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Bank/migrations/0008_auto_20200415_1838.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Bank/migrations/0009_auto_20200415_2000.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Bank/migrations/0010_deposits_date.py" afterDir="false" />
+    <list default="true" id="44d71a1a-eea2-49a2-ac86-eaa40d50ef7f" name="Default Changelist" comment="minor fixes">
+      <change afterPath="$PROJECT_DIR$/Procfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bank/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Bank/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bank/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Bank/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coursework/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/coursework/settings.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,6 +57,13 @@
   </component>
   <component name="GitRewordedCommitMessages">
     <option name="onto" value="d757ece2ada2445a1ef5c6ae87c55f00ba4605f2" />
+  </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="hiddenUrls">
+      <set>
+        <option value="https://github.com/PTaHHHa/Django_Coursework" />
+      </set>
+    </option>
   </component>
   <component name="ProjectId" id="1ZG8kZjBXN0ZCbrzyscgxJbsGPN" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -148,7 +150,8 @@
       <workItem from="1586957169157" duration="17173000" />
       <workItem from="1586977184200" duration="232000" />
       <workItem from="1587040818465" duration="1477000" />
-      <workItem from="1587049648024" duration="7709000" />
+      <workItem from="1587049648024" duration="7818000" />
+      <workItem from="1587117919240" duration="2719000" />
     </task>
     <task id="LOCAL-00001" summary="added funds to your personal account method was added and deposit model in models">
       <created>1586878672496</created>
@@ -164,7 +167,21 @@
       <option name="project" value="LOCAL" />
       <updated>1586879179030</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="minor fixes">
+      <created>1587060601272</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1587060601272</updated>
+    </task>
+    <task id="LOCAL-00004" summary="minor fixes">
+      <created>1587060652308</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1587060652308</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -175,7 +192,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -187,7 +216,8 @@
     <MESSAGE value="added funds to your personal account method was added and deposit model in models" />
     <MESSAGE value="'make a deposit' functional + funds withdrawal from account added" />
     <MESSAGE value="Revert &quot;'make a deposit' functional + funds withdrawal from account added&quot;&#10;&#10;This reverts commit 3977c8ec" />
-    <option name="LAST_COMMIT_MESSAGE" value="Revert &quot;'make a deposit' functional + funds withdrawal from account added&quot;&#10;&#10;This reverts commit 3977c8ec" />
+    <MESSAGE value="minor fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="minor fixes" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="181" key="#Plugins" timestamp="1586863608735">
@@ -198,6 +228,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="414" y="195" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1586878842131" />
+    <state x="716" y="330" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1587130192971">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="716" y="330" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1587130192971" />
     <state x="664" y="125" key="#coursework" timestamp="1586864893193">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -218,22 +252,22 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="452" y="223" key="Git.Interactive.Rebase.Dialog/0.0.1920.1080@0.0.1920.1080" timestamp="1586977275345" />
-    <state width="1877" height="288" key="GridCell.Tab.0.bottom" timestamp="1587056815053">
+    <state width="1877" height="288" key="GridCell.Tab.0.bottom" timestamp="1587060693684">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="288" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1587056815053" />
-    <state width="1877" height="288" key="GridCell.Tab.0.center" timestamp="1587056815052">
+    <state width="1877" height="288" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1587060693684" />
+    <state width="1877" height="288" key="GridCell.Tab.0.center" timestamp="1587060693684">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="288" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1587056815052" />
-    <state width="1877" height="288" key="GridCell.Tab.0.left" timestamp="1587056815052">
+    <state width="1877" height="288" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1587060693684" />
+    <state width="1877" height="288" key="GridCell.Tab.0.left" timestamp="1587060693683">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="288" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1587056815052" />
-    <state width="1877" height="288" key="GridCell.Tab.0.right" timestamp="1587056815052">
+    <state width="1877" height="288" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1587060693683" />
+    <state width="1877" height="288" key="GridCell.Tab.0.right" timestamp="1587060693684">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="288" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1587056815052" />
+    <state width="1877" height="288" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1587060693684" />
     <state width="209" height="539" key="HiddenNamespacesPopup" timestamp="1586878857005">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -242,10 +276,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="461" y="185" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1586864421412" />
-    <state x="552" y="269" key="Vcs.Push.Dialog.v2" timestamp="1586977359746">
+    <state x="552" y="269" key="Vcs.Push.Dialog.v2" timestamp="1587060663697">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="552" y="269" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1586977359746" />
+    <state x="552" y="269" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1587060663697" />
     <state x="631" y="192" key="VcsDiffUtil.ChangesDialog" timestamp="1586976815215">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
