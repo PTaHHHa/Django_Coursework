@@ -168,11 +168,11 @@
                                     </div>
 
                                     <div class="col-md-6">
-                                        <label>Deposit rate</label>
+                                        <label>Deposit type</label>
                                     </div>
 
                                     <div class="col-md-6">
-                                        <p>{{ request.user.profile.deposits.deposit_type }}</p>
+                                        <p>{{ request.user.profile.deposits.deposit_type }} руб.</p>
                                     </div>
 
                                     <div class="col-md-6">
@@ -180,7 +180,16 @@
                                     </div>
 
                                     <div class="col-md-6">
-                                        <p>{{ request.user.profile.deposits.deposit_type }}</p>
+                                        <p>{{ request.user.profile.deposits.tax_rate }}%</p>
+                                    </div>
+
+
+                                        <div class="col-md-6">
+                                            <label>Deposit income</label>
+                                        </div>
+
+                                    <div class="col-md-6">
+                                        <p>{{ request.user.profile.deposits.deposit_income }} руб.</p>
                                     </div>
 
                                     <div class="col-md-6">
@@ -188,9 +197,15 @@
                                     </div>
 
                                     <div class="col-md-6">
-                                        <p>{{ request.user.profile.deposits.deposit_type }}</p>
+                                        <p>{{ request.user.profile.deposits.total_income }} руб.</p>
                                     </div>
                                 </div>
+
+                                      <div class="row">
+                                        <div class="col-md-6">
+                                            <button type="submit"><a href="{% url 'deposit_form'%}">Create a deposit</a></button>
+                                        </div>
+                                    </div>
                                 {% endif %}
                             </div>
                         </div>

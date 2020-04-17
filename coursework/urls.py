@@ -20,6 +20,7 @@ from django.contrib import admin
 from django.urls import path, include
 from Bank import views
 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index, name="index"),
@@ -28,7 +29,7 @@ urlpatterns = [
     path('profile/delete', views.delete_profile, name="delete"),
     path('profile/account', views.account_profile, name="account"),
     path('profile/deposit', views.deposit, name="deposit_form"),
-    path('', include('allauth.urls'))
+    path('', include('allauth.urls')),
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

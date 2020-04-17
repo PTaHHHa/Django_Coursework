@@ -103,26 +103,32 @@ class Citizenship(models.Model):
 
 class Account(models.Model):
     profile = models.OneToOneField(Profile, on_delete=models.CASCADE)
-    current_balance = models.DecimalField(max_digits=10, decimal_places=2, blank=False, unique=False, default=0, null=False)
+    current_balance = models.DecimalField(max_digits=10, decimal_places=2, blank=False, unique=False, default=0,
+                                          null=False)
 
     def __str__(self):
         return str(self.profile.last_name + " " + self.profile.first_name)
 
 
 class Deposits(models.Model):
-
     DEPOSIT_TYPE = (
-            ("под 7.51% на 45 дней", "под 7.51% на 45 дней"),
-            ("под 8.56% на 95 дней", "под 8.56% на 95 дней"),
-            ("под 8.64% на 185 дней", "под 8.64% на 185 дней"),
-            ("под 8.87% на 385 дней", "под 8.87% на 385 дней"),
-            ("под 9.25% на 735 дней", "под 9.25% на 735 дней"),
+        ("под 11% на 45 дней", "под 11% на 45 дней"),
+        ("под 11.3% на 95 дней", "под 11.3% на 95 дней"),
+        ("под 12.8% на 185 дней", "под 12.8% на 185 дней"),
+        ("под 13.2% на 385 дней", "под 13.2% на 385 дней"),
+        ("под 12.5% на 735 дней", "под 12.5% на 735 дней"),
     )
 
     profile = models.OneToOneField(Profile, on_delete=models.CASCADE)
-    deposit_type = models.CharField(max_length=900, choices=DEPOSIT_TYPE, null=False, default=1)
-    current_balance = models.DecimalField(max_digits=10, decimal_places=2, blank=False, unique=False, default=0, null=False)
+    deposit_type = models.CharField(max_length=900, choices=DEPOSIT_TYPE, null=False, default=0)
+    deposit_value = models.IntegerField(blank=False, unique=False, default=0, null=False)
+    deposit_income = models.DecimalField(max_digits=10, decimal_places=2,
+                                         blank=False, unique=False, default=0, null=False, editable=False)
+    total_income = models.DecimalField(max_digits=10, decimal_places=2,
+                                       blank=False, unique=False, default=0, null=False, editable=False)
     date = models.DateField(blank=False, default=datetime.date.today, editable=False)
+    tax_rate = models.DecimalField(max_digits=4, decimal_places=2,
+                                   blank=False, unique=False, default=0, null=False, editable=False)
 
     class Meta:
         verbose_name_plural = "Deposits"

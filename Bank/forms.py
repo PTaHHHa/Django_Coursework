@@ -1,6 +1,7 @@
 from django.contrib import admin
 from django import forms
 from Bank.models import Profile, Deposits, Account
+from django import forms
 
 
 class DateInput(forms.DateInput):
@@ -50,6 +51,7 @@ class DepositForm(forms.ModelForm):
         model = Deposits
         fields = '__all__'
         exclude = ['profile']
+        widgets = {'deposit_type': forms.RadioSelect}
 
 
 class AccountAdmin(admin.ModelAdmin):
@@ -58,4 +60,3 @@ class AccountAdmin(admin.ModelAdmin):
 
 class DepositAdmin(admin.ModelAdmin):
     form = DepositForm
-
