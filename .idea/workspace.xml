@@ -25,9 +25,9 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="44d71a1a-eea2-49a2-ac86-eaa40d50ef7f" name="Default Changelist" comment="sign in template edited">
+    <list default="true" id="44d71a1a-eea2-49a2-ac86-eaa40d50ef7f" name="Default Changelist" comment="ALLOWED_HOSTS added">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coursework/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/coursework/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/profile.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -154,7 +154,7 @@
       <workItem from="1587117919240" duration="2719000" />
       <workItem from="1587219914182" duration="548000" />
       <workItem from="1587220808854" duration="529000" />
-      <workItem from="1587221679873" duration="8165000" />
+      <workItem from="1587221679873" duration="9196000" />
     </task>
     <task id="LOCAL-00001" summary="added funds to your personal account method was added and deposit model in models">
       <created>1586878672496</created>
@@ -198,7 +198,14 @@
       <option name="project" value="LOCAL" />
       <updated>1587226813663</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="ALLOWED_HOSTS added">
+      <created>1587230467497</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1587230467497</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -235,7 +242,8 @@
     <MESSAGE value="Revert &quot;'make a deposit' functional + funds withdrawal from account added&quot;&#10;&#10;This reverts commit 3977c8ec" />
     <MESSAGE value="minor fixes" />
     <MESSAGE value="sign in template edited" />
-    <option name="LAST_COMMIT_MESSAGE" value="sign in template edited" />
+    <MESSAGE value="ALLOWED_HOSTS added" />
+    <option name="LAST_COMMIT_MESSAGE" value="ALLOWED_HOSTS added" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="181" key="#Plugins" timestamp="1586863608735">
@@ -298,10 +306,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="461" y="185" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1587221819306" />
-    <state x="552" y="269" key="Vcs.Push.Dialog.v2" timestamp="1587226820771">
+    <state x="552" y="269" key="Vcs.Push.Dialog.v2" timestamp="1587230470778">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="552" y="269" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1587226820771" />
+    <state x="552" y="269" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1587230470778" />
     <state x="631" y="192" key="VcsDiffUtil.ChangesDialog" timestamp="1586976815215">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
