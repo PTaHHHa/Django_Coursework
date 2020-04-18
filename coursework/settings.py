@@ -78,6 +78,8 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'coursework.wsgi.application'
 
+ALLOWED_HOSTS = ['http://ptahhha.pythonanywhere.com/']
+
 
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
