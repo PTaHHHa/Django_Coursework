@@ -1,5 +1,4 @@
 from django.contrib import admin
-from django import forms
 from Bank.models import Profile, Deposits, Account
 from django import forms
 
