@@ -15,7 +15,6 @@ import os
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
@@ -24,7 +23,6 @@ SECRET_KEY = 'e^ua(o*gd_fxj&$r1e8f&c2_*8e$o16)ucv=%2af)#qq^q16@s'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-
 
 # Application definition
 
@@ -39,9 +37,6 @@ INSTALLED_APPS = [
     'Bank',
     'allauth',
     'allauth.account',
-    'allauth.socialaccount',
-    'allauth.socialaccount.providers.vk',
-    'allauth.socialaccount.apps',
     'django_cleanup.apps.CleanupConfig',
 ]
 
@@ -62,8 +57,7 @@ ROOT_URLCONF = 'coursework.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates')]
-        ,
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -78,8 +72,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'coursework.wsgi.application'
 
-ALLOWED_HOSTS = ['127.0.0.1', 'http://ptahhha.pythonanywhere.com/']
-
+ALLOWED_HOSTS = ['127.0.0.1', 'ptahhha.pythonanywhere.com']
 
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
@@ -138,7 +131,6 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
-
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/

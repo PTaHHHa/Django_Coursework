@@ -1,7 +1,6 @@
 {% extends "account/base.html" %}
 
 {% load i18n %}
-{% load account socialaccount %}
 
 {% block head_title %}{% trans "Sign In" %}{% endblock %}
 
@@ -10,18 +9,8 @@
 <div class="jumbotron">
 <h1>{% trans "Sign In" %}</h1>
 
-{% get_providers as socialaccount_providers %}
-
-{% if socialaccount_providers %}
 <p>{% blocktrans with site.name as site_name %}Already have an account? <a href="{{ signup_url }}">sign up</a>
 {% endblocktrans %}</p>
-
-{% include "socialaccount/snippets/login_extra.html" %}
-
-{% else %}
-<p>{% blocktrans %}If you have not created an account yet, then please
-<a href="{{ signup_url }}">sign up</a> first.{% endblocktrans %}</p>
-{% endif %}
 
 <form class="login" method="POST" action="{% url 'account_login' %}">
 <div class="col-md-7 col-md-offset-3 col-sm-8 col-sm-offset-2 text-right text-lg-right">

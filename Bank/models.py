@@ -36,7 +36,6 @@ class Profile(models.Model):
     last_name = models.CharField(max_length=60, unique=False, null=True)
     otchestvo = models.CharField(max_length=60, unique=False, null=True)
     birth_date = models.DateField(blank=False, default=datetime.date.today)
-    sex = models.BooleanField('Sex', choices=SEX_CHOICES, null=False, default=True)
     seria_pasporta = models.CharField(max_length=2, blank=False, null=False, default="MP")
 
     passport_number = models.IntegerField(unique=True, blank=False, null=True)
@@ -144,8 +143,8 @@ class Deposits(models.Model):
 
 def create_signal(sender, instance, created, **kwargs):
     if created:
-        account = Account.objects.create(profile=instance)
-        deposit = Deposits.objects.create(profile=instance)
+        Account.objects.create(profile=instance)
+        Deposits.objects.create(profile=instance)
 
 
 post_save.connect(create_signal, sender=Profile)
