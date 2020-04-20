@@ -4,10 +4,10 @@ from django.contrib.auth import logout
 from django.shortcuts import render, redirect
 from Bank.models import Profile, Deposits, Account
 from Bank.forms import ProfileForm, ImageForm, DepositForm, AccountForm
-from datetime import datetime, date
+from datetime import timedelta, date
 
 # Create your views here.
-global deposit_creating_time, percentage
+global percentage
 
 
 def index(request):
@@ -38,8 +38,12 @@ def update_profile(request):
 
 @login_required
 def user_profile(request):
-    deposit_counter(request)
-    return render(request, "../templates/profile.html")
+    try:
+        deposit_counter(request)
+    except Profile.DoesNotExist:
+        return render(request, "../templates/profile.html")
+    finally:
+        return render(request, "../templates/profile.html")
 
 
 def delete_profile(request):
@@ -89,10 +93,21 @@ def deposit(request):
 
                     messages.success(request, 'Deposit created')
 
-                    """ПРОРАБОТАТЬ ФУНКЦИОНАЛ ДЛЯ ДАТЫ В deposit_counter()"""
                     deposit_creating_time = date.today()
-                    Deposits.objects.update(date=deposit_creating_time)
-                    print(deposit_creating_time)
+                    Deposits.objects.update(deposit_creating_date=deposit_creating_time)
+
+                    deposit_object = Deposits.objects.get(id=request.user.profile.deposits.id)
+                    deposit_type_object = getattr(deposit_object, 'deposit_type')
+                    if deposit_type_object == Deposits.DEPOSIT_TYPE[0][0]:
+                        Deposits.objects.update(deposit_end_date=(deposit_creating_time + timedelta(days=45)))
+                    elif deposit_type_object == Deposits.DEPOSIT_TYPE[1][0]:
+                        Deposits.objects.update(deposit_end_date=(deposit_creating_time + timedelta(days=95)))
+                    elif deposit_type_object == Deposits.DEPOSIT_TYPE[2][0]:
+                        Deposits.objects.update(deposit_end_date=(deposit_creating_time + timedelta(days=185)))
+                    elif deposit_type_object == Deposits.DEPOSIT_TYPE[3][0]:
+                        Deposits.objects.update(deposit_end_date=(deposit_creating_time + timedelta(days=385)))
+                    elif deposit_type_object == Deposits.DEPOSIT_TYPE[4][0]:
+                        Deposits.objects.update(deposit_end_date=(deposit_creating_time + timedelta(days=735)))
 
                     return redirect('profile')
         else:
@@ -111,36 +126,62 @@ def deposit_counter(request):
     deposit_object = Deposits.objects.get(id=request.user.profile.deposits.id)
     deposit_value_object = getattr(deposit_object, 'deposit_value')
     deposit_type_object = getattr(deposit_object, 'deposit_type')
+    deposit_creating_date = getattr(deposit_object, 'deposit_creating_date')
+    deposit_end_date = getattr(deposit_object, 'deposit_end_date')
     if deposit_type_object == Deposits.DEPOSIT_TYPE[0][0]:
+        Deposits.objects.update(tax_rate=13)
         percentage = 0.11
-        days = 45
         deposit_income = deposit_value_object * percentage * (tax / 100)
         print(deposit_value_object * percentage)
-        Deposits.objects.update(deposit_income=deposit_income, tax_rate=13,
-                                total_income=(deposit_income + deposit_value_object))
+        Deposits.objects.update(temporary_deposit_income=deposit_income,
+                                temporary_total_income=(deposit_income + deposit_value_object))
+        if deposit_creating_date == deposit_end_date:
+            Deposits.objects.update(deposit_income=deposit_income,
+                                    total_income=(deposit_income + deposit_value_object),
+                                    temporary_deposit_income=None,
+                                    temporary_total_income=None)
     elif deposit_type_object == Deposits.DEPOSIT_TYPE[1][0]:
+        Deposits.objects.update(tax_rate=13)
         percentage = 0.113
-        days = 95
         deposit_income = deposit_value_object * percentage * (tax / 100)
-        Deposits.objects.update(deposit_income=deposit_income, tax_rate=13,
-                                total_income=(deposit_income + deposit_value_object))
+        Deposits.objects.update(deposit_income=deposit_income,
+                                total_income=(deposit_income + deposit_value_object),
+                                temporary_deposit_income=None,
+                                temporary_total_income=None)
+        if deposit_creating_date == deposit_end_date:
+            Deposits.objects.update(deposit_income=deposit_income,
+                                    total_income=(deposit_income + deposit_value_object),
+                                    temporary_deposit_income=None,
+                                    temporary_total_income=None)
     elif deposit_type_object == Deposits.DEPOSIT_TYPE[2][0]:
+        Deposits.objects.update(tax_rate=13)
         percentage = 0.128
-        days = 185
         deposit_income = deposit_value_object * percentage * (tax / 100)
-        Deposits.objects.update(deposit_income=deposit_income, tax_rate=13,
-                                total_income=(deposit_income + deposit_value_object))
+        Deposits.objects.update(temporary_deposit_income=deposit_income,
+                                temporary_total_income=(deposit_income + deposit_value_object))
+        if deposit_creating_date == deposit_end_date:
+            Deposits.objects.update(deposit_income=deposit_income,
+                                    total_income=(deposit_income + deposit_value_object),
+                                    temporary_deposit_income=None,
+                                    temporary_total_income=None)
     elif deposit_type_object == Deposits.DEPOSIT_TYPE[3][0]:
         percentage = 0.132
-        days = 385
-        tax = 0
         deposit_income = deposit_value_object * percentage
-        Deposits.objects.update(deposit_income=deposit_income, tax_rate=tax,
-                                total_income=(deposit_income + deposit_value_object))
+        Deposits.objects.update(temporary_deposit_income=deposit_income,
+                                temporary_total_income=(deposit_income + deposit_value_object))
+        if deposit_creating_date == deposit_end_date:
+            Deposits.objects.update(deposit_income=deposit_income,
+                                    total_income=(deposit_income + deposit_value_object),
+                                    temporary_deposit_income=None,
+                                    temporary_total_income=None)
     elif deposit_type_object == Deposits.DEPOSIT_TYPE[4][0]:
         percentage = 0.125
-        days = 735
-        tax = 0
         deposit_income = deposit_value_object * percentage
-        Deposits.objects.update(deposit_income=deposit_income, tax_rate=tax,
-                                total_income=(deposit_income + deposit_value_object))
+        Deposits.objects.update(temporary_deposit_income=deposit_income,
+                                temporary_total_income=(deposit_income + deposit_value_object))
+        if deposit_creating_date == deposit_end_date:
+            Deposits.objects.update(deposit_income=deposit_income,
+                                    total_income=(deposit_income + deposit_value_object),
+                                    temporary_deposit_income=None,
+                                    temporary_total_income=None)
+

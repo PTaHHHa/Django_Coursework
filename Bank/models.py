@@ -122,11 +122,16 @@ class Deposits(models.Model):
     profile = models.OneToOneField(Profile, on_delete=models.CASCADE)
     deposit_type = models.CharField(max_length=900, choices=DEPOSIT_TYPE, null=False, default=0)
     deposit_value = models.IntegerField(blank=False, unique=False, default=0, null=False)
+    temporary_deposit_income = models.DecimalField(max_digits=10, decimal_places=2,
+                                                   blank=False, unique=False, default=0, null=True, editable=False)
+    temporary_total_income = models.DecimalField(max_digits=10, decimal_places=2,
+                                                 blank=False, unique=False, default=0, null=True, editable=False)
     deposit_income = models.DecimalField(max_digits=10, decimal_places=2,
                                          blank=False, unique=False, default=0, null=False, editable=False)
     total_income = models.DecimalField(max_digits=10, decimal_places=2,
                                        blank=False, unique=False, default=0, null=False, editable=False)
-    date = models.DateField(blank=False, default=datetime.date.today, editable=False)
+    deposit_creating_date = models.DateField(blank=False, default=datetime.date.today, editable=False)
+    deposit_end_date = models.DateField(blank=False, default=datetime.date.today, editable=False)
     tax_rate = models.DecimalField(max_digits=4, decimal_places=2,
                                    blank=False, unique=False, default=0, null=False, editable=False)
 

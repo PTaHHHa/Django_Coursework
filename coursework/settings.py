@@ -78,7 +78,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'coursework.wsgi.application'
 
-ALLOWED_HOSTS = ['http://ptahhha.pythonanywhere.com/']
+ALLOWED_HOSTS = ['127.0.0.1', 'http://ptahhha.pythonanywhere.com/']
 
 
 # Database

@@ -187,7 +187,7 @@
                                         <div class="col-md-6">
                                             <label>Deposit income</label>
                                         </div>
-
+    {% if request.user.profile.deposits.temporary_deposit_income == None %}
                                     <div class="col-md-6">
                                         <p>{{ request.user.profile.deposits.deposit_income }} руб.</p>
                                     </div>
@@ -199,6 +199,19 @@
                                     <div class="col-md-6">
                                         <p>{{ request.user.profile.deposits.total_income }} руб.</p>
                                     </div>
+    {% else %}
+                                        <div class="col-md-6">
+                                        <p>{{ request.user.profile.deposits.temporary_deposit_income }} руб.</p>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <label>Amount at the end of the term</label>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <p>{{ request.user.profile.deposits.temporary_total_income }} руб.</p>
+                                    </div>
+    {% endif %}
                                 </div>
                                 {% endif %}
                             </div>
