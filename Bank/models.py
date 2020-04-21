@@ -49,7 +49,7 @@ class Profile(models.Model):
                                            blank=False, null=True, verbose_name='Адрес проживания')
     mobile_phone = models.CharField(max_length=20, unique=True, blank=False, null=True, verbose_name='Моб. тел.')
     job = models.CharField(max_length=20, unique=True, blank=False, null=True, verbose_name='Место работы')
-    position = models.CharField(max_length=20, unique=True, blank=False, null=True, verbose_name='Должность')
+    position = models.CharField(max_length=20, unique=False, blank=False, null=True, verbose_name='Должность')
     citizenship = models.ForeignKey('Citizenship', on_delete=models.CASCADE, null=False, default=1, verbose_name='Гражданство')
     family = models.CharField(max_length=9999, choices=FAMILY_CHOICES, null=False, default="неопределено", verbose_name='Семейное положение')
 
@@ -109,13 +109,13 @@ class Account(models.Model):
 
 class Deposits(models.Model):
     DEPOSIT_TYPE = (
-        ("под 11% на 35 дней", "под 11% на 35 дней"),
-        ("под 12.5% на 95 дней", "под 12.5% на 95 дней"),
-        ("под 12% на 185 дней", "под 12% на 185 дней"),
-        ("под 12.1% на 275 дней", "под 12.1% на 275 дней"),
-        ("под 12.5% на 370 дней", "под 12.5% на 370 дней"),
-        ("под 12.5% на 735 дней", "под 12.5% на 735 дней"),
-        ("под 11% на 37 месяцев", "под 11% на 37 месяцев"),
+        ("под 11.3% на 95 дней", "под 11.3% на 95 дней"),
+        ("под 11.8% на 125 дней", "под 11.8% на 125 дней"),
+        ("под 12.8% на 185 дней", "под 12.8% на 185 дней"),
+        ("под 13% на 275 дней", "под 13% на 275 дней"),
+        ("под 13.2% на 385 дней", "под 13.2% на 385 дней"),
+        ("под 12.8% на 550 дней", "под 12.8% на 550 дней"),
+        ("под 12.5% на 735 дней", "под 11% на 735 дней"),
     )
 
     profile = models.OneToOneField(Profile, on_delete=models.CASCADE)

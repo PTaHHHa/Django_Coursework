@@ -4,7 +4,7 @@ from django.contrib.auth import logout
 from django.shortcuts import render, redirect
 from Bank.models import Profile, Deposits, Account
 from Bank.forms import ProfileForm, ImageForm, DepositForm, AccountForm
-from datetime import timedelta, date, datetime
+from datetime import timedelta, date
 
 
 # Create your views here.
@@ -28,10 +28,10 @@ def update_profile(request):
             if form.is_valid():
                 form.save()
                 image.save()
-                messages.success(request, f'Your account has been updated')
+                messages.success(request, f'Информация была обновлена')
                 return redirect('profile')
     else:
-        messages.error(request, 'You should login first')
+        messages.error(request, 'Необходимо войти в аккаунт')
         return redirect('index')
     return render(request, "../templates/update_profile.html", {'form': form})
 
@@ -50,7 +50,7 @@ def delete_profile(request):
     b = Profile.objects.get(user=request.user)
     b.delete()
     logout(request)
-    messages.success(request, 'Account was successfully deleted')
+    messages.success(request, 'Аккаунт удалён успешно')
     return render(request, '../templates/base.html')
 
 
@@ -66,7 +66,7 @@ def account_profile(request):
             account = AccountForm()
             return render(request, "../templates/account_profile.html", {'account': account})
     else:
-        messages.error(request, 'You should login first')
+        messages.error(request, 'Необходимо войти в аккаунт')
         return redirect('index')
 
 
@@ -81,17 +81,17 @@ def deposit(request):
                 account_value_object = getattr(account_object, 'current_balance')
                 deposit_value_object = deposit_form.cleaned_data['deposit_value']
                 if deposit_value_object < 100:
-                    messages.error(request, 'Minimal deposit value 100 руб.')
+                    messages.error(request, 'Минимальная сумма вклада 100 руб.')
                     return redirect('profile')
                 elif deposit_value_object > account_value_object:
-                    messages.error(request, "You don't have enough money to make a deposit!")
+                    messages.error(request, "Недостаточно средств!")
                     return redirect('profile')
                 else:
                     deposit_form.save()
                     account_object.current_balance = account_value_object - deposit_value_object
                     account_object.save()
 
-                    messages.success(request, 'Deposit created')
+                    messages.success(request, 'Вклад открыт!')
 
                     deposit_creating_time = date.today()
                     Deposits.objects.update(deposit_creating_date=deposit_creating_time)
@@ -100,10 +100,10 @@ def deposit(request):
                     deposit_type_object = getattr(deposit_object, 'deposit_type')
                     if deposit_type_object == Deposits.DEPOSIT_TYPE[0][0]:
                         Deposits.objects.filter(profile=request.user.profile) \
-                            .update(deposit_end_date=(deposit_creating_time + timedelta(days=45)))
+                            .update(deposit_end_date=(deposit_creating_time + timedelta(days=95)))
                     elif deposit_type_object == Deposits.DEPOSIT_TYPE[1][0]:
                         Deposits.objects.filter(profile=request.user.profile) \
-                            .update(deposit_end_date=(deposit_creating_time + timedelta(days=95)))
+                            .update(deposit_end_date=(deposit_creating_time + timedelta(days=125)))
                     elif deposit_type_object == Deposits.DEPOSIT_TYPE[2][0]:
                         Deposits.objects.filter(profile=request.user.profile) \
                             .update(deposit_end_date=(deposit_creating_time + timedelta(days=185)))
@@ -112,20 +112,20 @@ def deposit(request):
                             .update(deposit_end_date=(deposit_creating_time + timedelta(days=275)))
                     elif deposit_type_object == Deposits.DEPOSIT_TYPE[4][0]:
                         Deposits.objects.filter(profile=request.user.profile) \
-                            .update(deposit_end_date=(deposit_creating_time + timedelta(days=370)))
+                            .update(deposit_end_date=(deposit_creating_time + timedelta(days=385)))
                     elif deposit_type_object == Deposits.DEPOSIT_TYPE[5][0]:
                         Deposits.objects.filter(profile=request.user.profile) \
-                            .update(deposit_end_date=(deposit_creating_time + timedelta(days=735)))
+                            .update(deposit_end_date=(deposit_creating_time + timedelta(days=550)))
                     elif deposit_type_object == Deposits.DEPOSIT_TYPE[6][0]:
                         Deposits.objects.filter(profile=request.user.profile) \
-                            .update(deposit_end_date=(deposit_creating_time + timedelta(weeks=148)))
+                            .update(deposit_end_date=(deposit_creating_time + timedelta(days=735)))
 
                     return redirect('profile')
         else:
             deposit_form = DepositForm()
             return render(request, "../templates/deposit_form.html", {'deposit_form': deposit_form})
     else:
-        messages.error(request, 'You should login first')
+        messages.error(request, 'Необходимо войти в аккаунт')
         return redirect('index')
 
 
@@ -158,35 +158,34 @@ def deposit_billing(request):
     deposit_object = Deposits.objects.get(id=request.user.profile.deposits.id)
     deposit_type_object = getattr(deposit_object, 'deposit_type')
     if deposit_type_object == Deposits.DEPOSIT_TYPE[0][0]:
-        days = 35
-        tax = 13
-        percentage = 11
-        deposit_counter(request, percentage, tax, days)
-    elif deposit_type_object == Deposits.DEPOSIT_TYPE[1][0]:
         days = 95
         tax = 13
-        percentage = 12.5
+        percentage = 11.3
+        deposit_counter(request, percentage, tax, days)
+    elif deposit_type_object == Deposits.DEPOSIT_TYPE[1][0]:
+        days = 125
+        tax = 13
+        percentage = 11.8
         deposit_counter(request, percentage, tax, days)
     elif deposit_type_object == Deposits.DEPOSIT_TYPE[2][0]:
         days = 185
         tax = 13
-        percentage = 12
+        percentage = 12.8
         deposit_counter(request, percentage, tax, days)
     elif deposit_type_object == Deposits.DEPOSIT_TYPE[3][0]:
         days = 275
         tax = 13
-        percentage = 12.1
+        percentage = 13
         deposit_counter(request, percentage, tax, days)
     elif deposit_type_object == Deposits.DEPOSIT_TYPE[4][0]:
-        days = 370
-        tax = 13
-        percentage = 12.5
-        deposit_counter(request, percentage, tax, days)
+        days = 385
+        percentage = 13.2
+        deposit_counter(request, percentage, tax=0, days=days)
     elif deposit_type_object == Deposits.DEPOSIT_TYPE[5][0]:
-        days = 735
+        days = 550
         percentage = 12.6
         deposit_counter(request, percentage, tax=0, days=days)
     elif deposit_type_object == Deposits.DEPOSIT_TYPE[6][0]:
-        days = 37*30
+        days = 735
         percentage = 13
         deposit_counter(request, percentage, tax=0, days=days)
