@@ -20,35 +20,29 @@
       <path>
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
         <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="BRANCH:master" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:A_branch" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </select>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="44d71a1a-eea2-49a2-ac86-eaa40d50ef7f" name="Default Changelist" comment="profile fix">
-      <change afterPath="$PROJECT_DIR$/media/profile_pictures/Vi-UifkOevk.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Bank/migrations/0016_auto_20200421_1206.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Bank/migrations/0017_auto_20200421_1644.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Bank/migrations/0018_auto_20200421_1657.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Bank/migrations/0019_auto_20200421_1710.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Bank/migrations/0020_auto_20200421_1723.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Bank/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Bank/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Bank/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Bank/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/coursework/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/coursework/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/profile_pictures/Vi-UifkOevk_CKjLQkg.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/account/account_inactive.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/account/base.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/account/email.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/account/email_confirm.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/profile_pictures/Vi-UifkOevk.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/todd.png" beforeDir="false" afterPath="$PROJECT_DIR$/media/todd.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/account/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/account/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/account/logout.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/account/password_change.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/account/password_reset.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/account/password_reset_done.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/account/password_reset_from_key.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/account/password_reset_from_key_done.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/account/password_set.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/account/signup_closed.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/account/verification_sent.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/account/verified_email_required.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/account/signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/account/signup.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/account_profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/account_profile.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/profile.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +63,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="ccaeb1d66674ea326fabab0daf4a589230186da2" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -100,7 +94,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/media/profile_pictures" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -110,12 +104,13 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\sorok\PycharmProjects\Django_Coursework\templates" />
-      <recent name="C:\Users\IT HYPE\PycharmProjects\coursework\static\css" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\IT HYPE\PycharmProjects\coursework\media" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\sorok\PycharmProjects\Django_Coursework\media\profile_pictures" />
+      <recent name="C:\Users\sorok\PycharmProjects\Django_Coursework\templates" />
+      <recent name="C:\Users\IT HYPE\PycharmProjects\coursework\static\css" />
     </key>
   </component>
   <component name="RunManager">
@@ -179,7 +174,12 @@
       <workItem from="1587374681313" duration="1323000" />
       <workItem from="1587377196782" duration="42000" />
       <workItem from="1587389734767" duration="10226000" />
-      <workItem from="1587400364219" duration="1672000" />
+      <workItem from="1587400364219" duration="1942000" />
+      <workItem from="1587456202392" duration="1421000" />
+      <workItem from="1587459136496" duration="977000" />
+      <workItem from="1587460130072" duration="2370000" />
+      <workItem from="1587462522662" duration="1266000" />
+      <workItem from="1587463817000" duration="12314000" />
     </task>
     <task id="LOCAL-00001" summary="added funds to your personal account method was added and deposit model in models">
       <created>1586878672496</created>
@@ -244,7 +244,14 @@
       <option name="project" value="LOCAL" />
       <updated>1587395901069</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="deposit functionality was completed">
+      <created>1587402288982</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1587402288982</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -261,13 +268,28 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="master" />
+                        <option value="A_branch" />
                       </list>
                     </value>
                   </entry>
                 </map>
               </option>
             </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="A_branch" />
+                </option>
+              </RecentGroup>
+            </list>
           </value>
         </entry>
       </map>
@@ -284,7 +306,8 @@
     <MESSAGE value="ALLOWED_HOSTS added" />
     <MESSAGE value="profile fix" />
     <MESSAGE value="added temporary deposit and total income, so they can stash income info before the deposit ends. They will be deleted then" />
-    <option name="LAST_COMMIT_MESSAGE" value="added temporary deposit and total income, so they can stash income info before the deposit ends. They will be deleted then" />
+    <MESSAGE value="deposit functionality was completed" />
+    <option name="LAST_COMMIT_MESSAGE" value="deposit functionality was completed" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="181" key="#Plugins" timestamp="1586863608735">
@@ -319,22 +342,22 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="452" y="223" key="Git.Interactive.Rebase.Dialog/0.0.1920.1080@0.0.1920.1080" timestamp="1586977275345" />
-    <state width="1877" height="287" key="GridCell.Tab.0.bottom" timestamp="1587401984438">
+    <state width="1877" height="287" key="GridCell.Tab.0.bottom" timestamp="1587480488231">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="287" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1587401984438" />
-    <state width="1877" height="287" key="GridCell.Tab.0.center" timestamp="1587401984438">
+    <state width="1877" height="287" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1587480488231" />
+    <state width="1877" height="287" key="GridCell.Tab.0.center" timestamp="1587480488231">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="287" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1587401984438" />
-    <state width="1877" height="287" key="GridCell.Tab.0.left" timestamp="1587401984437">
+    <state width="1877" height="287" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1587480488231" />
+    <state width="1877" height="287" key="GridCell.Tab.0.left" timestamp="1587480488231">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="287" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1587401984437" />
-    <state width="1877" height="287" key="GridCell.Tab.0.right" timestamp="1587401984438">
+    <state width="1877" height="287" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1587480488231" />
+    <state width="1877" height="287" key="GridCell.Tab.0.right" timestamp="1587480488231">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="287" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1587401984438" />
+    <state width="1877" height="287" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1587480488231" />
     <state width="209" height="539" key="HiddenNamespacesPopup" timestamp="1586878857005">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -347,10 +370,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="461" y="185" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1587221819306" />
-    <state x="552" y="269" key="Vcs.Push.Dialog.v2" timestamp="1587395907866">
+    <state x="552" y="269" key="Vcs.Push.Dialog.v2" timestamp="1587480623083">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="552" y="269" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1587395907866" />
+    <state x="552" y="269" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1587480623083" />
     <state x="631" y="192" key="VcsDiffUtil.ChangesDialog" timestamp="1586976815215">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -359,6 +382,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="762" y="450" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1080@0.0.1920.1080" timestamp="1587219953482" />
+    <state x="674" y="118" width="571" height="843" key="find.popup" timestamp="1587478554877">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="674" y="118" width="571" height="843" key="find.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1587478554877" />
     <state x="724" y="171" key="git4idea.branch.GitSmartOperationDialog" timestamp="1586977239267">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -371,9 +398,9 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="743" y="382" key="git4idea.rebase.GitRebaseDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1586879902869" />
-    <state x="623" y="259" width="672" height="678" key="search.everywhere.popup" timestamp="1586879896970">
+    <state x="623" y="259" width="672" height="678" key="search.everywhere.popup" timestamp="1587478217773">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="623" y="259" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1586879896970" />
+    <state x="623" y="259" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1587478217773" />
   </component>
 </project>

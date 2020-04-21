@@ -12,7 +12,7 @@
 
     {% if messages %}
     <div>
-      <strong>Messages:</strong>
+      <strong>Сообщение:</strong>
       <ul>
         {% for message in messages %}
         <li>{{message}}</li>
@@ -22,19 +22,14 @@
     {% endif %}
 
     <div class="container">
-      <strong>Menu:</strong>
-        <form action="{% url 'account_logout' %}">
-        <input type="submit" value="Go to Google" />
-    </form>
       <ul>
         {% if user.is_authenticated %}
-        <li><a href="{% url 'account_email' %}">Change E-mail</a></li>
-        <li><a href="{% url 'account_logout' %}">Sign Out</a></li>
-            <li><a href="{% url 'profile' %}">{{ request.user.username }} profile info</a> </li>
+        <li><a href="{% url 'account_logout' %}">Выход</a></li>
+            <li><a href="{% url 'profile' %}">Профиль пользователя {{ request.user.username }}</a> </li>
 
         {% else %}
-        <li><a href="{% url 'account_login' %}">Sign In</a></li>
-        <li><a href="{% url 'account_signup' %}">Sign Up</a></li>
+        <li><a href="{% url 'account_login' %}">Войти</a></li>
+        <li><a href="{% url 'account_signup' %}">Регистрация</a></li>
         {% endif %}
       </ul>
     </div>

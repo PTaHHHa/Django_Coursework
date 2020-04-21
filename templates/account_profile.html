@@ -8,10 +8,13 @@
 </head>
 <body>
     <form method="post" enctype="multipart/form-data">{% csrf_token%}
-        <table border="1">
+          <div class="form-group">
+
+        <table class="table" border="1">
             {{ account.as_table }}
         </table>
         <button type="submit">POST</button>
+          </div>
     </form>
 </body>
 </html>

@@ -9,7 +9,7 @@
 <div class="jumbotron">
 <h1>{% trans "Sign In" %}</h1>
 
-<p>{% blocktrans with site.name as site_name %}Already have an account? <a href="{{ signup_url }}">sign up</a>
+<p>{% blocktrans with site.name as site_name %}Нет аккаунта? <a href="{{ signup_url }}"> Регистрация!</a>
 {% endblocktrans %}</p>
 
 <form class="login" method="POST" action="{% url 'account_login' %}">
