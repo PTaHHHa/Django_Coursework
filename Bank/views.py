@@ -179,9 +179,8 @@ def deposit_billing(request):
         deposit_counter(request, percentage, tax, days)
     elif deposit_type_object == Deposits.DEPOSIT_TYPE[4][0]:
         days = 370
-        tax = 13
         percentage = 12.5
-        deposit_counter(request, percentage, tax, days)
+        deposit_counter(request, percentage, tax=0, days=days)
     elif deposit_type_object == Deposits.DEPOSIT_TYPE[5][0]:
         days = 735
         percentage = 12.6
