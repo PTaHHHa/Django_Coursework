@@ -20,30 +20,19 @@
       <path>
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
         <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="BRANCH:A_branch" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:E_branch" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="44d71a1a-eea2-49a2-ac86-eaa40d50ef7f" name="Default Changelist" comment="profile fix">
-      <change afterPath="$PROJECT_DIR$/Bank/migrations/0016_auto_20200421_1206.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Bank/migrations/0017_auto_20200421_1644.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Bank/migrations/0018_auto_20200421_1657.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Bank/migrations/0019_auto_20200421_1710.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Bank/migrations/0020_auto_20200421_1723.py" afterDir="false" />
+    <list default="true" id="44d71a1a-eea2-49a2-ac86-eaa40d50ef7f" name="Default Changelist" comment="small fix">
+      <change afterPath="$PROJECT_DIR$/Bank/migrations/0022_auto_20200422_1554.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Bank/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Bank/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Bank/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Bank/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coursework/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/coursework/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/profile_pictures/Vi-UifkOevk.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/todd.png" beforeDir="false" afterPath="$PROJECT_DIR$/media/todd.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/account/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/account/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/account/signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/account/signup.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/account_profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/account_profile.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/profile.html" afterDir="false" />
     </list>
+    <list id="b0fb6f8a-5f05-4686-b6d4-525c090e6584" name="small fix" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -180,6 +169,8 @@
       <workItem from="1587460130072" duration="2370000" />
       <workItem from="1587462522662" duration="1266000" />
       <workItem from="1587463817000" duration="12314000" />
+      <workItem from="1587545487701" duration="990000" />
+      <workItem from="1587558565308" duration="1698000" />
     </task>
     <task id="LOCAL-00001" summary="added funds to your personal account method was added and deposit model in models">
       <created>1586878672496</created>
@@ -251,7 +242,21 @@
       <option name="project" value="LOCAL" />
       <updated>1587402288982</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="small fix">
+      <created>1587481968185</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1587481968185</updated>
+    </task>
+    <task id="LOCAL-00012" summary="small fix">
+      <created>1587482033283</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1587482033283</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -268,7 +273,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="A_branch" />
+                        <option value="E_branch" />
                       </list>
                     </value>
                   </entry>
@@ -307,7 +312,8 @@
     <MESSAGE value="profile fix" />
     <MESSAGE value="added temporary deposit and total income, so they can stash income info before the deposit ends. They will be deleted then" />
     <MESSAGE value="deposit functionality was completed" />
-    <option name="LAST_COMMIT_MESSAGE" value="deposit functionality was completed" />
+    <MESSAGE value="small fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="small fix" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="181" key="#Plugins" timestamp="1586863608735">
@@ -342,22 +348,22 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="452" y="223" key="Git.Interactive.Rebase.Dialog/0.0.1920.1080@0.0.1920.1080" timestamp="1586977275345" />
-    <state width="1877" height="287" key="GridCell.Tab.0.bottom" timestamp="1587480488231">
+    <state width="1877" height="287" key="GridCell.Tab.0.bottom" timestamp="1587560093071">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="287" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1587480488231" />
-    <state width="1877" height="287" key="GridCell.Tab.0.center" timestamp="1587480488231">
+    <state width="1877" height="287" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1587560093071" />
+    <state width="1877" height="287" key="GridCell.Tab.0.center" timestamp="1587560093070">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="287" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1587480488231" />
-    <state width="1877" height="287" key="GridCell.Tab.0.left" timestamp="1587480488231">
+    <state width="1877" height="287" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1587560093070" />
+    <state width="1877" height="287" key="GridCell.Tab.0.left" timestamp="1587560093070">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="287" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1587480488231" />
-    <state width="1877" height="287" key="GridCell.Tab.0.right" timestamp="1587480488231">
+    <state width="1877" height="287" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1587560093070" />
+    <state width="1877" height="287" key="GridCell.Tab.0.right" timestamp="1587560093071">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="287" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1587480488231" />
+    <state width="1877" height="287" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1587560093071" />
     <state width="209" height="539" key="HiddenNamespacesPopup" timestamp="1586878857005">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -370,10 +376,14 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="461" y="185" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1587221819306" />
-    <state x="552" y="269" key="Vcs.Push.Dialog.v2" timestamp="1587480623083">
+    <state x="807" y="447" key="VCS.ChangelistChooser" timestamp="1587481983216">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="552" y="269" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1587480623083" />
+    <state x="807" y="447" key="VCS.ChangelistChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1587481983216" />
+    <state x="552" y="269" key="Vcs.Push.Dialog.v2" timestamp="1587482051833">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="552" y="269" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1587482051833" />
     <state x="631" y="192" key="VcsDiffUtil.ChangesDialog" timestamp="1586976815215">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -386,10 +396,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="674" y="118" width="571" height="843" key="find.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1587478554877" />
-    <state x="724" y="171" key="git4idea.branch.GitSmartOperationDialog" timestamp="1586977239267">
+    <state x="724" y="171" key="git4idea.branch.GitSmartOperationDialog" timestamp="1587480815132">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="724" y="171" key="git4idea.branch.GitSmartOperationDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1586977239267" />
+    <state x="724" y="171" key="git4idea.branch.GitSmartOperationDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1587480815132" />
     <state x="712" y="319" key="git4idea.merge.GitMergeDialog" timestamp="1586879887287">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -398,9 +408,13 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="743" y="382" key="git4idea.rebase.GitRebaseDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1586879902869" />
-    <state x="623" y="259" width="672" height="678" key="search.everywhere.popup" timestamp="1587478217773">
+    <state x="784" y="310" key="refactoring.ChangeSignatureDialog" timestamp="1587559652299">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="623" y="259" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1587478217773" />
+    <state x="784" y="310" key="refactoring.ChangeSignatureDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1587559652299" />
+    <state x="623" y="259" width="672" height="678" key="search.everywhere.popup" timestamp="1587559642527">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="623" y="259" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1587559642527" />
   </component>
 </project>

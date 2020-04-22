@@ -6,7 +6,6 @@ from Bank.models import Profile, Deposits, Account
 from Bank.forms import ProfileForm, ImageForm, DepositForm, AccountForm
 from datetime import timedelta, date
 
-
 # Create your views here.
 
 
@@ -43,6 +42,7 @@ def user_profile(request):
     except Profile.DoesNotExist:
         return render(request, "../templates/profile.html")
     finally:
+        print(request.user.last_login)
         return render(request, "../templates/profile.html")
 
 
@@ -95,30 +95,23 @@ def deposit(request):
 
                     deposit_creating_time = date.today()
                     Deposits.objects.update(deposit_creating_date=deposit_creating_time)
-
                     deposit_object = Deposits.objects.get(id=request.user.profile.deposits.id)
                     deposit_type_object = getattr(deposit_object, 'deposit_type')
                     if deposit_type_object == Deposits.DEPOSIT_TYPE[0][0]:
                         Deposits.objects.filter(profile=request.user.profile) \
-                            .update(deposit_end_date=(deposit_creating_time + timedelta(days=95)))
+                            .update(deposit_end_date=(deposit_creating_time + timedelta(weeks=12)))
                     elif deposit_type_object == Deposits.DEPOSIT_TYPE[1][0]:
                         Deposits.objects.filter(profile=request.user.profile) \
-                            .update(deposit_end_date=(deposit_creating_time + timedelta(days=125)))
+                            .update(deposit_end_date=(deposit_creating_time + timedelta(weeks=24)))
                     elif deposit_type_object == Deposits.DEPOSIT_TYPE[2][0]:
                         Deposits.objects.filter(profile=request.user.profile) \
-                            .update(deposit_end_date=(deposit_creating_time + timedelta(days=185)))
+                            .update(deposit_end_date=(deposit_creating_time + timedelta(weeks=36)))
                     elif deposit_type_object == Deposits.DEPOSIT_TYPE[3][0]:
                         Deposits.objects.filter(profile=request.user.profile) \
-                            .update(deposit_end_date=(deposit_creating_time + timedelta(days=275)))
+                            .update(deposit_end_date=(deposit_creating_time + timedelta(weeks=48)))
                     elif deposit_type_object == Deposits.DEPOSIT_TYPE[4][0]:
                         Deposits.objects.filter(profile=request.user.profile) \
-                            .update(deposit_end_date=(deposit_creating_time + timedelta(days=385)))
-                    elif deposit_type_object == Deposits.DEPOSIT_TYPE[5][0]:
-                        Deposits.objects.filter(profile=request.user.profile) \
-                            .update(deposit_end_date=(deposit_creating_time + timedelta(days=550)))
-                    elif deposit_type_object == Deposits.DEPOSIT_TYPE[6][0]:
-                        Deposits.objects.filter(profile=request.user.profile) \
-                            .update(deposit_end_date=(deposit_creating_time + timedelta(days=735)))
+                            .update(deposit_end_date=(deposit_creating_time + timedelta(weeks=60)))
 
                     return redirect('profile')
         else:
@@ -129,12 +122,12 @@ def deposit(request):
         return redirect('index')
 
 
-def deposit_counter(request, percentage, tax, days):
+def deposit_counter(request, percentage, tax, months):
     deposit_object = Deposits.objects.get(id=request.user.profile.deposits.id)
     deposit_value_object = getattr(deposit_object, 'deposit_value')
     deposit_creating_date = getattr(deposit_object, 'deposit_creating_date')
     deposit_end_date = getattr(deposit_object, 'deposit_end_date')
-    deposit_income_without_tax = deposit_value_object * (percentage/100)*(days/365)
+    deposit_income_without_tax = deposit_value_object * (percentage/100)*(months/12)
     if tax != 0:
         tax_rate = deposit_income_without_tax * tax/100
         Deposits.objects.filter(profile=request.user.profile) \
@@ -158,34 +151,26 @@ def deposit_billing(request):
     deposit_object = Deposits.objects.get(id=request.user.profile.deposits.id)
     deposit_type_object = getattr(deposit_object, 'deposit_type')
     if deposit_type_object == Deposits.DEPOSIT_TYPE[0][0]:
-        days = 95
+        months = 3
         tax = 13
-        percentage = 11.3
-        deposit_counter(request, percentage, tax, days)
+        percentage = 11.2
+        deposit_counter(request, percentage, tax, months)
     elif deposit_type_object == Deposits.DEPOSIT_TYPE[1][0]:
-        days = 125
+        months = 6
         tax = 13
-        percentage = 11.8
-        deposit_counter(request, percentage, tax, days)
+        percentage = 11.5
+        deposit_counter(request, percentage, tax, months)
     elif deposit_type_object == Deposits.DEPOSIT_TYPE[2][0]:
-        days = 185
+        months = 9
         tax = 13
-        percentage = 12.8
-        deposit_counter(request, percentage, tax, days)
+        percentage = 12
+        deposit_counter(request, percentage, tax, months)
     elif deposit_type_object == Deposits.DEPOSIT_TYPE[3][0]:
-        days = 275
-        tax = 13
+        months = 12
         percentage = 13
-        deposit_counter(request, percentage, tax, days)
+        deposit_counter(request, percentage, tax=0, months=months)
     elif deposit_type_object == Deposits.DEPOSIT_TYPE[4][0]:
-        days = 385
-        percentage = 13.2
-        deposit_counter(request, percentage, tax=0, days=days)
-    elif deposit_type_object == Deposits.DEPOSIT_TYPE[5][0]:
-        days = 550
-        percentage = 12.6
-        deposit_counter(request, percentage, tax=0, days=days)
-    elif deposit_type_object == Deposits.DEPOSIT_TYPE[6][0]:
-        days = 735
-        percentage = 13
-        deposit_counter(request, percentage, tax=0, days=days)
+        months = 15
+        percentage = 13.5
+        deposit_counter(request, percentage, tax=0, months=months)
+
