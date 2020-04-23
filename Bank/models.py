@@ -72,7 +72,7 @@ class Profile(models.Model):
             img.save(self.profile_picture.path)
 
     def __str__(self):
-        return str(self.user.profile.last_name + " " + self.user.profile.first_name)
+        return str(self.user.last_name + " " + self.user.first_name)
 
     class Meta:
         ordering = ['last_name', 'first_name']
@@ -141,10 +141,16 @@ class Deposits(models.Model):
         return str(self.profile.last_name + " " + self.profile.first_name)
 
 
-def create_signal(sender, instance, created, **kwargs):
+def create_profile_signal(sender, instance, created, **kwargs):
+    if created:
+        Profile.objects.create(user=instance)
+
+
+def create_account_signal(sender, instance, created, **kwargs):
     if created:
         Account.objects.create(profile=instance)
         Deposits.objects.create(profile=instance)
 
 
-post_save.connect(create_signal, sender=Profile)
+post_save.connect(create_profile_signal, sender=User)
+post_save.connect(create_account_signal, sender=Profile)
