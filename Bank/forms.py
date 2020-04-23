@@ -1,13 +1,35 @@
 from django.contrib import admin
 from Bank.models import Profile, Deposits, Account
 from django import forms
+from django.contrib.auth.models import User
+from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.admin import UserAdmin
+
+
+class UserCreateForm(UserCreationForm):
+
+    class Meta:
+        model = User
+        fields = ('username', 'first_name', 'last_name', )
+
+
+class UserAdmin(UserAdmin):
+    add_form = UserCreateForm
+    prepopulated_fields = {'username': ('first_name' , 'last_name', )}
+
+    add_fieldsets = (
+        (None, {
+            'classes': ('wide',),
+            'fields': ('first_name', 'last_name', 'username', 'password1', 'password2', ),
+        }),
+    )
 
 
 class DateInput(forms.DateInput):
     input_type = 'date'
 
 
-class ProfileForm(forms.ModelForm):
+class BasicForm(forms.ModelForm):
     class Meta:
         model = Profile
         widgets = {'birth_date': DateInput, 'data_vidachi': DateInput, 'sex': forms.RadioSelect,
@@ -25,7 +47,6 @@ class ProfileForm(forms.ModelForm):
                    'job': forms.TextInput(attrs={'pattern': '[-0-9a-zA-Zа-яА-Я]+'}),
                    'position': forms.TextInput(attrs={'pattern': '[-0-9a-zA-Zа-яА-Я]+'}), }
         fields = '__all__'
-        exclude = ['user']
 
 
 class ImageForm(forms.ModelForm):
@@ -34,8 +55,16 @@ class ImageForm(forms.ModelForm):
         fields = ['profile_picture', ]
 
 
+class ProfileForm(forms.ModelForm):
+    form = BasicForm
+
+    class Meta:
+        model = Profile
+        exclude = ['user']
+
+
 class ProfileAdmin(admin.ModelAdmin):
-    form = ProfileForm
+    form = BasicForm
 
 
 class AccountForm(forms.ModelForm):
