@@ -27,12 +27,7 @@
   <component name="ChangeListManager">
     <list default="true" id="44d71a1a-eea2-49a2-ac86-eaa40d50ef7f" name="Default Changelist" comment="profile fix">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bank/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/Bank/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bank/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/Bank/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bank/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Bank/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bank/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Bank/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coursework/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/coursework/settings.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -151,6 +146,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Django tests.Test: Bank" />
+        <item itemvalue="Django tests.Test: Bank" />
       </list>
     </recent_temporary>
   </component>
@@ -196,6 +192,12 @@
       <workItem from="1587462522662" duration="1266000" />
       <workItem from="1587463817000" duration="12314000" />
       <workItem from="1587657961749" duration="6591000" />
+      <workItem from="1587738477115" duration="4287000" />
+      <workItem from="1587748684756" duration="1218000" />
+      <workItem from="1587833080507" duration="61000" />
+      <workItem from="1587833415616" duration="600000" />
+      <workItem from="1587910916361" duration="5853000" />
+      <workItem from="1587997167136" duration="1384000" />
     </task>
     <task id="LOCAL-00001" summary="added funds to your personal account method was added and deposit model in models">
       <created>1586878672496</created>
@@ -267,7 +269,21 @@
       <option name="project" value="LOCAL" />
       <updated>1587402288982</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="small fixes + post_save for Profile model">
+      <created>1587665650534</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1587665650534</updated>
+    </task>
+    <task id="LOCAL-00012" summary="small model fixes">
+      <created>1587997617575</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1587997617575</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -323,7 +339,9 @@
     <MESSAGE value="profile fix" />
     <MESSAGE value="added temporary deposit and total income, so they can stash income info before the deposit ends. They will be deleted then" />
     <MESSAGE value="deposit functionality was completed" />
-    <option name="LAST_COMMIT_MESSAGE" value="deposit functionality was completed" />
+    <MESSAGE value="small fixes + post_save for Profile model" />
+    <MESSAGE value="small model fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="small model fixes" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="181" key="#Plugins" timestamp="1587658293227">
@@ -334,10 +352,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="414" y="195" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1587221221930" />
-    <state x="716" y="330" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1587130192971">
+    <state x="716" y="330" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1587748119029">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="716" y="330" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1587130192971" />
+    <state x="716" y="330" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1587748119029" />
     <state x="664" y="125" key="#coursework" timestamp="1586864893193">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -346,10 +364,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="511" y="40" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1586977301089" />
-    <state x="92" y="92" width="1736" height="896" key="DiffContextDialog" timestamp="1586977357711">
+    <state x="92" y="92" width="1736" height="896" key="DiffContextDialog" timestamp="1587665819037">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="92" y="92" width="1736" height="896" key="DiffContextDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1586977357711" />
+    <state x="92" y="92" width="1736" height="896" key="DiffContextDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1587665819037" />
     <state x="635" y="231" key="FileChooserDialogImpl" timestamp="1586878820700">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -358,22 +376,22 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="452" y="223" key="Git.Interactive.Rebase.Dialog/0.0.1920.1080@0.0.1920.1080" timestamp="1586977275345" />
-    <state width="1877" height="287" key="GridCell.Tab.0.bottom" timestamp="1587664570967">
+    <state width="1877" height="287" key="GridCell.Tab.0.bottom" timestamp="1587935418522">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="287" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1587664570967" />
-    <state width="1877" height="287" key="GridCell.Tab.0.center" timestamp="1587664570967">
+    <state width="1877" height="287" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1587935418522" />
+    <state width="1877" height="287" key="GridCell.Tab.0.center" timestamp="1587935418522">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="287" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1587664570967" />
-    <state width="1877" height="287" key="GridCell.Tab.0.left" timestamp="1587664570967">
+    <state width="1877" height="287" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1587935418522" />
+    <state width="1877" height="287" key="GridCell.Tab.0.left" timestamp="1587935418522">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="287" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1587664570967" />
-    <state width="1877" height="287" key="GridCell.Tab.0.right" timestamp="1587664570967">
+    <state width="1877" height="287" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1587935418522" />
+    <state width="1877" height="287" key="GridCell.Tab.0.right" timestamp="1587935418522">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="287" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1587664570967" />
+    <state width="1877" height="287" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1587935418522" />
     <state width="209" height="539" key="HiddenNamespacesPopup" timestamp="1586878857005">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -386,10 +404,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="461" y="185" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1587221819306" />
-    <state x="552" y="269" key="Vcs.Push.Dialog.v2" timestamp="1587480623083">
+    <state x="552" y="269" key="Vcs.Push.Dialog.v2" timestamp="1587997625994">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="552" y="269" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1587480623083" />
+    <state x="552" y="269" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1587997625994" />
     <state x="631" y="192" key="VcsDiffUtil.ChangesDialog" timestamp="1586976815215">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
