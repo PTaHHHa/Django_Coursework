@@ -38,7 +38,13 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'django_cleanup.apps.CleanupConfig',
+    'django_extensions',
 ]
+
+GRAPH_MODELS = {
+  'all_applications': True,
+  'group_models': True,
+}
 
 SITE_ID = 1
 
