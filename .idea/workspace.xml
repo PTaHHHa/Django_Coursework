@@ -25,10 +25,7 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="44d71a1a-eea2-49a2-ac86-eaa40d50ef7f" name="Default Changelist" comment="profile fix">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coursework/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/coursework/settings.py" afterDir="false" />
-    </list>
+    <list default="true" id="44d71a1a-eea2-49a2-ac86-eaa40d50ef7f" name="Default Changelist" comment="profile fix" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -197,7 +194,7 @@
       <workItem from="1587833080507" duration="61000" />
       <workItem from="1587833415616" duration="600000" />
       <workItem from="1587910916361" duration="5853000" />
-      <workItem from="1587997167136" duration="1384000" />
+      <workItem from="1587997167136" duration="1925000" />
     </task>
     <task id="LOCAL-00001" summary="added funds to your personal account method was added and deposit model in models">
       <created>1586878672496</created>
@@ -283,7 +280,14 @@
       <option name="project" value="LOCAL" />
       <updated>1587997617575</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="STATIC_ROOT added">
+      <created>1587998814056</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1587998814056</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -341,7 +345,8 @@
     <MESSAGE value="deposit functionality was completed" />
     <MESSAGE value="small fixes + post_save for Profile model" />
     <MESSAGE value="small model fixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="small model fixes" />
+    <MESSAGE value="STATIC_ROOT added" />
+    <option name="LAST_COMMIT_MESSAGE" value="STATIC_ROOT added" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="181" key="#Plugins" timestamp="1587658293227">
@@ -404,10 +409,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="461" y="185" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1587221819306" />
-    <state x="552" y="269" key="Vcs.Push.Dialog.v2" timestamp="1587997625994">
+    <state x="552" y="269" key="Vcs.Push.Dialog.v2" timestamp="1587998820380">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="552" y="269" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1587997625994" />
+    <state x="552" y="269" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1587998820380" />
     <state x="631" y="192" key="VcsDiffUtil.ChangesDialog" timestamp="1586976815215">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
