@@ -25,7 +25,14 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="44d71a1a-eea2-49a2-ac86-eaa40d50ef7f" name="Default Changelist" comment="profile fix" />
+    <list default="true" id="44d71a1a-eea2-49a2-ac86-eaa40d50ef7f" name="Default Changelist" comment="profile fix">
+      <change afterPath="$PROJECT_DIR$/Bank/migrations/0023_auto_20200427_1917.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bank/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/Bank/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bank/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Bank/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/profile.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -86,13 +93,14 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\IT HYPE\PycharmProjects\coursework\media" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\sorok\PycharmProjects\Django_Coursework\media\profile_pictures" />
       <recent name="C:\Users\sorok\PycharmProjects\Django_Coursework\templates" />
       <recent name="C:\Users\IT HYPE\PycharmProjects\coursework\static\css" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\sorok\PycharmProjects\Django_Coursework\static\jquery" />
+      <recent name="C:\Users\IT HYPE\PycharmProjects\coursework\media" />
     </key>
   </component>
   <component name="RunManager" selected="Django Server.coursework">
@@ -194,7 +202,7 @@
       <workItem from="1587833080507" duration="61000" />
       <workItem from="1587833415616" duration="600000" />
       <workItem from="1587910916361" duration="5853000" />
-      <workItem from="1587997167136" duration="1925000" />
+      <workItem from="1587997167136" duration="11497000" />
     </task>
     <task id="LOCAL-00001" summary="added funds to your personal account method was added and deposit model in models">
       <created>1586878672496</created>
@@ -287,7 +295,14 @@
       <option name="project" value="LOCAL" />
       <updated>1587998814056</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="superuser created">
+      <created>1587999390073</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1587999390073</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -346,7 +361,8 @@
     <MESSAGE value="small fixes + post_save for Profile model" />
     <MESSAGE value="small model fixes" />
     <MESSAGE value="STATIC_ROOT added" />
-    <option name="LAST_COMMIT_MESSAGE" value="STATIC_ROOT added" />
+    <MESSAGE value="superuser created" />
+    <option name="LAST_COMMIT_MESSAGE" value="superuser created" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="181" key="#Plugins" timestamp="1587658293227">
@@ -381,46 +397,46 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="452" y="223" key="Git.Interactive.Rebase.Dialog/0.0.1920.1080@0.0.1920.1080" timestamp="1586977275345" />
-    <state width="1877" height="287" key="GridCell.Tab.0.bottom" timestamp="1587935418522">
+    <state width="1877" height="287" key="GridCell.Tab.0.bottom" timestamp="1588008856335">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="287" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1587935418522" />
-    <state width="1877" height="287" key="GridCell.Tab.0.center" timestamp="1587935418522">
+    <state width="1877" height="287" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1588008856335" />
+    <state width="1877" height="287" key="GridCell.Tab.0.center" timestamp="1588008856335">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="287" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1587935418522" />
-    <state width="1877" height="287" key="GridCell.Tab.0.left" timestamp="1587935418522">
+    <state width="1877" height="287" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1588008856335" />
+    <state width="1877" height="287" key="GridCell.Tab.0.left" timestamp="1588008856335">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="287" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1587935418522" />
-    <state width="1877" height="287" key="GridCell.Tab.0.right" timestamp="1587935418522">
+    <state width="1877" height="287" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1588008856335" />
+    <state width="1877" height="287" key="GridCell.Tab.0.right" timestamp="1588008856335">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="287" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1587935418522" />
+    <state width="1877" height="287" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1588008856335" />
     <state width="209" height="539" key="HiddenNamespacesPopup" timestamp="1586878857005">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="209" height="539" key="HiddenNamespacesPopup/0.0.1920.1080@0.0.1920.1080" timestamp="1586878857005" />
-    <state x="718" y="177" key="RollbackChangesDialog" timestamp="1587219958825">
+    <state x="718" y="177" key="RollbackChangesDialog" timestamp="1587999375343">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="718" y="177" key="RollbackChangesDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1587219958825" />
+    <state x="718" y="177" key="RollbackChangesDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1587999375343" />
     <state x="461" y="185" key="SettingsEditor" timestamp="1587221819306">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="461" y="185" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1587221819306" />
-    <state x="552" y="269" key="Vcs.Push.Dialog.v2" timestamp="1587998820380">
+    <state x="552" y="269" key="Vcs.Push.Dialog.v2" timestamp="1587999395273">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="552" y="269" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1587998820380" />
+    <state x="552" y="269" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1587999395273" />
     <state x="631" y="192" key="VcsDiffUtil.ChangesDialog" timestamp="1586976815215">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="631" y="192" key="VcsDiffUtil.ChangesDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1586976815215" />
-    <state x="762" y="450" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1587219953482">
+    <state x="762" y="450" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1588011009752">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="762" y="450" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1080@0.0.1920.1080" timestamp="1587219953482" />
+    <state x="762" y="450" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1080@0.0.1920.1080" timestamp="1588011009752" />
     <state x="674" y="118" width="571" height="843" key="find.popup" timestamp="1587478554877">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>

@@ -194,6 +194,20 @@
                                     <div class="col-md-6">
                                         <p>{{ request.user.profile.deposits.temporary_total_income }} руб.</p>
                                     </div>
+                                     <div class="col-md-6">
+                                        <label>Дата открытия вклада</label>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <p>{{ request.user.profile.deposits.deposit_creating_date }}</p>
+                                    </div>
+                                     <div class="col-md-6">
+                                        <label>Дата закрытия вклада</label>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <p>{{ request.user.profile.deposits.deposit_end_date }}</p>
+                                    </div>
                                 </div>
                                 {% endif %}
                             </div>

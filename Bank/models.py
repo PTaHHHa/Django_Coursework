@@ -126,20 +126,25 @@ class Deposits(models.Model):
 
     profile = models.OneToOneField(Profile, on_delete=models.CASCADE)
     deposit_type = models.CharField(max_length=900, choices=DEPOSIT_TYPE, null=False, default=0,
-                                    verbose_name='Тип депозита')
-    deposit_value = models.IntegerField(blank=False, unique=False, default=0, null=False, verbose_name='Сумма депозита')
+                                    verbose_name='Тип вклада')
+    deposit_value = models.IntegerField(blank=False, unique=False, default=0, null=False, verbose_name='Сумма вклада')
     temporary_deposit_income = models.DecimalField(max_digits=10, decimal_places=2,
-                                                   blank=False, unique=False, default=0, null=True, editable=False)
+                                                   blank=False, unique=False, default=0, null=True, editable=False
+                                                   , verbose_name='Доход от вклада')
     temporary_total_income = models.DecimalField(max_digits=10, decimal_places=2,
-                                                 blank=False, unique=False, default=0, null=True, editable=False)
+                                                 blank=False, unique=False, default=0, null=True, editable=False
+                                                 , verbose_name='Сумма в конце срока')
     deposit_income = models.DecimalField(max_digits=10, decimal_places=2,
                                          blank=False, unique=False, default=0, null=False, editable=False)
     total_income = models.DecimalField(max_digits=10, decimal_places=2,
                                        blank=False, unique=False, default=0, null=False, editable=False)
-    deposit_creating_date = models.DateField(blank=False, default=datetime.date.today, editable=False)
-    deposit_end_date = models.DateField(blank=False, default=datetime.date.today, editable=False)
+    deposit_creating_date = models.DateField(blank=False, default=datetime.date.today, editable=False
+                                             , verbose_name='Дата открытия вклада')
+    deposit_end_date = models.DateField(blank=False, default=datetime.date.today,
+                                        editable=False, verbose_name='Дата закрытия вклада')
     tax_rate = models.DecimalField(max_digits=4, decimal_places=2,
-                                   blank=False, unique=False, default=0, null=False, editable=False)
+                                   blank=False, unique=False, default=0, null=False, editable=False
+                                   , verbose_name='Налог')
 
     class Meta:
         verbose_name_plural = "Вклады"
