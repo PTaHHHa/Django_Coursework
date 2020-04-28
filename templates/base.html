@@ -13,21 +13,11 @@
   </head>
   <body>
     {% block body %}
-
-    {% if messages %}
-    <div>
-      <strong>Сообщение:</strong>
-      <ul>
-        {% for message in messages %}
-        <li>{{message}}</li>
-        {% endfor %}
-      </ul>
-    </div>
-    {% endif %}
         <div class="test">
     <div class="image-container">
         <img src="/media/fransabank_logo.png" alt=""/>
     </div>
+        <br/>
         <br/>
     <div class="container">
     {% if user.is_authenticated %}

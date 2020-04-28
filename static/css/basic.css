@@ -1,5 +1,9 @@
+.container{
+  padding-left: 75px;
+}
 .test{
-
+  padding-top: 300px;
+  padding-left: 720px;
 }
 body{
       background: -webkit-linear-gradient(left, #3931af, #00c6ff);
