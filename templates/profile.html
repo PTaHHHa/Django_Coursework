@@ -14,9 +14,12 @@
 </head>
 <body>
 {% if request.user.profile.first_name == None %}
-    <p class="proile-rating">Looks like you don't have an account</p>
+    <div class="test">
+    <h3>Похоже, что у вас нет профиля</h3>
+        <br/>
     <div class="col-md-2">
-        <a href="{% url 'update'%}" class="btn btn-primary btn-lg enabled" role="button" aria-disabled="true">Create now!</a>
+        <a href="{% url 'update'%}" class="btn btn-primary btn-lg enabled btn-outline-light" role="button" aria-disabled="true">Создать!</a>
+    </div>
     </div>
 {% else %}
     <div class="container emp-profile">
@@ -59,16 +62,15 @@
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" id="profile-tab" data-toggle="tab" href="#account" role="tab" aria-controls="profile" aria-selected="false">Личный счёт</a>
-                                </li><li class="nav-item">
-                                    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#deposit" role="tab" aria-controls="profile" aria-selected="false">Вклады</a>
-                                </li>
+                                    </li><li class="nav-item">
+                                        <a class="nav-link" id="profile-tab" data-toggle="tab" href="#deposit" role="tab" aria-controls="profile" aria-selected="false">Вклады</a>
+                                    </li>
                             </ul>
                         </div>
                     </div>
                     <div class="col-md-2">
-                        <a href="{% url 'update'%}" class="btn btn-primary enabled" role="button" aria-disabled="true">Редактировать</a><br>
-                        <a href="{% url 'account_logout'%}" class="btn btn-primary enabled" role="button" aria-disabled="true">Выход</a>
-                        <a href="{% url 'delete'%}" class="btn btn-primary enabled" role="button" aria-disabled="true">Удалить аккаунт</a>
+                        <a href="{% url 'update'%}" class="btn btn-primary enabled" role="button" aria-disabled="true">Редактировать</a><br/>
+                        <br><a href="{% url 'account_logout'%}" class="btn btn-primary enabled" role="button" aria-disabled="true">Выход</a>
                     </div>
                 </div>
                 <div class="row">
@@ -80,6 +82,7 @@
                             <p>Работа</p>
                             <a href="">{{ request.user.profile.position }} в кампании {{ request.user.profile.job }}</a><br/>
                             <p class="proile-rating">Дата регистрации : {{ request.user.date_joined}}</p><br/>
+                            <br><a href="{% url 'delete'%}" class="btn btn-danger enabled" role="button" aria-disabled="true">Удалить аккаунт</a>
                         </div>
                     </div>
                     <div class="col-md-8">
@@ -142,7 +145,13 @@
                                 </div>
                             </div>
                             <div class="tab-pane fade" id="deposit" role="tabpanel" aria-labelledby="profile-tab">
-                                {% if request.user.profile.deposits.deposit_value == 0 %}
+                                {% if request.user.profile.account.current_balance == 0 %}
+                                    <div class="row">
+                                            <div class="col-md-6">
+                                                <label>На личном счету недостаточно средств для открытия вклада</label>
+                                            </div>
+                                        </div>
+                                {% elif request.user.profile.deposits.deposit_value == 0 %}
                                     <div class="row">
                                             <div class="col-md-6">
                                                 <label>Похоже у вас нет вклада</label>

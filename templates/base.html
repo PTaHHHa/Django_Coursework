@@ -21,11 +21,11 @@
         <br/>
     <div class="container">
     {% if user.is_authenticated %}
-        <a href="{% url 'account_logout' %}" type="button" class="btn btn-primary btn-lg">Выход</a>
-        <a href="{% url 'profile' %}" type="button" class="btn btn-primary btn-lg">Профиль пользователя</a>
+        <a href="{% url 'account_logout' %}" type="button" class="btn btn-primary btn-lg btn-outline-light">Выход</a>
+        <a href="{% url 'profile' %}" type="button" class="btn btn-primary btn-lg btn-outline-light">Профиль пользователя</a>
     {% else %}
-        <a href="{% url 'account_login' %}" type="button" class="btn btn-primary btn-lg">Войти</a>
-        <a href="{% url 'account_signup' %}" type="button" class="btn btn-primary btn-lg">Регистрация</a>
+        <a href="{% url 'account_login' %}" type="button" class="btn btn-primary btn-lg btn-outline-light">Войти</a>
+        <a href="{% url 'account_signup' %}" type="button" class="btn btn-primary btn-lg btn-outline-light">Регистрация</a>
     {% endif %}
     </div>
         </div>

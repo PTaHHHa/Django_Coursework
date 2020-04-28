@@ -1,6 +1,12 @@
 body{
     background: -webkit-linear-gradient(left, #3931af, #00c6ff);
 }
+
+.test{
+  padding-top: 300px;
+  padding-left: 720px;
+}
+
 .col-md-6{
     font-weight: 600;
 }
