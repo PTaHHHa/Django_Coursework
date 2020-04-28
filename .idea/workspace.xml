@@ -26,24 +26,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="44d71a1a-eea2-49a2-ac86-eaa40d50ef7f" name="Default Changelist" comment="profile fix">
-      <change afterPath="$PROJECT_DIR$/Bank/migrations/0024_auto_20200427_2216.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/fransabank_logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/myapp_models.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/login.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/update_profile.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bank/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/Bank/apps.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bank/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/Bank/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bank/signals.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/coursework/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/coursework/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/account/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/account/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/basic.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/basic.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/login.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/account/signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/account/signup.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/account_profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/account_profile.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/deposit_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/deposit_form.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/profile.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/update_profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/update_profile.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -217,7 +205,7 @@
       <workItem from="1587833415616" duration="600000" />
       <workItem from="1587910916361" duration="5853000" />
       <workItem from="1587997167136" duration="15331000" />
-      <workItem from="1588062301326" duration="12073000" />
+      <workItem from="1588062301326" duration="18251000" />
     </task>
     <task id="LOCAL-00001" summary="added funds to your personal account method was added and deposit model in models">
       <created>1586878672496</created>
@@ -324,7 +312,14 @@
       <option name="project" value="LOCAL" />
       <updated>1588012755552</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="templates edited">
+      <created>1588075728920</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1588075728920</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -385,7 +380,8 @@
     <MESSAGE value="STATIC_ROOT added" />
     <MESSAGE value="superuser created" />
     <MESSAGE value="small fixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="small fixes" />
+    <MESSAGE value="templates edited" />
+    <option name="LAST_COMMIT_MESSAGE" value="templates edited" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="181" key="#Plugins" timestamp="1587658293227">
@@ -424,22 +420,22 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="452" y="223" key="Git.Interactive.Rebase.Dialog/0.0.1920.1080@0.0.1920.1080" timestamp="1586977275345" />
-    <state width="1877" height="287" key="GridCell.Tab.0.bottom" timestamp="1588074832548">
+    <state width="1877" height="287" key="GridCell.Tab.0.bottom" timestamp="1588081260019">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="287" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1588074832548" />
-    <state width="1877" height="287" key="GridCell.Tab.0.center" timestamp="1588074832548">
+    <state width="1877" height="287" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1588081260019" />
+    <state width="1877" height="287" key="GridCell.Tab.0.center" timestamp="1588081260019">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="287" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1588074832548" />
-    <state width="1877" height="287" key="GridCell.Tab.0.left" timestamp="1588074832548">
+    <state width="1877" height="287" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1588081260019" />
+    <state width="1877" height="287" key="GridCell.Tab.0.left" timestamp="1588081260019">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="287" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1588074832548" />
-    <state width="1877" height="287" key="GridCell.Tab.0.right" timestamp="1588074832548">
+    <state width="1877" height="287" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1588081260019" />
+    <state width="1877" height="287" key="GridCell.Tab.0.right" timestamp="1588081260019">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="287" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1588074832548" />
+    <state width="1877" height="287" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1588081260019" />
     <state width="209" height="539" key="HiddenNamespacesPopup" timestamp="1586878857005">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -452,10 +448,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="461" y="185" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1587221819306" />
-    <state x="552" y="269" key="Vcs.Push.Dialog.v2" timestamp="1588012768959">
+    <state x="552" y="269" key="Vcs.Push.Dialog.v2" timestamp="1588075737043">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="552" y="269" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1588012768959" />
+    <state x="552" y="269" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1588075737043" />
     <state x="631" y="192" key="VcsDiffUtil.ChangesDialog" timestamp="1586976815215">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>

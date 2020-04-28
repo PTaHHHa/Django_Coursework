@@ -1,3 +1,13 @@
+.test{
+
+}
+body{
+      background: -webkit-linear-gradient(left, #3931af, #00c6ff);
+}
+img{
+  width: 40%;
+  height: 50%;
+}
 .navbar {
   background-color: #393736;
 }
