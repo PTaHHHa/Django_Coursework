@@ -1,31 +1,49 @@
-{% extends "account/base.html" %}
+{% load crispy_forms_tags %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link href="/static/css/login.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <form class="login" method="POST" action="{% url 'account_login' %}">
+        {% csrf_token %}
+    <!------ Include the above in your HEAD tag ---------->
 
-{% load i18n %}
-
-{% block head_title %}{% trans "Sign In" %}{% endblock %}
-
-{% block content %}
-    <div class="container text-capitalize text-lg-center">
-<div class="jumbotron">
-<h1>{% trans "Sign In" %}</h1>
-
-<p>{% blocktrans with site.name as site_name %}Нет аккаунта? <a href="{{ signup_url }}"> Регистрация!</a>
-{% endblocktrans %}</p>
-
-<form class="login" method="POST" action="{% url 'account_login' %}">
-<div class="col-md-7 col-md-offset-3 col-sm-8 col-sm-offset-2 text-right text-lg-right">
-  {% csrf_token %}
-  {{ form.as_p }}
-</div>
-  {% if redirect_field_value %}
-  <input type="hidden" class="btn btn-primary" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
-  {% endif %}
-<div class="col-md-7 text-lg-right">
-  <a class="button secondaryAction" href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
-  <button class = "btn btn-primary btn-lg" role = "button" type="submit">{% trans "Sign In" %}</button>
-</div>
-</form>
-
-{% endblock %}
-</div>
-</div>
+    <div class="container register">
+                    <div class="row">
+                        <div class="col-md-3 register-left">
+                            <div class="image-container">
+                                <img src="/media/fransabank_logo.png" alt=""/>
+                            </div>
+                            <br/><br/><br/>
+                            <h3>Добро пожаловать!</h3>
+                        </div>
+                        <div class="col-md-9 register-right">
+                            <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
+                                <li class="nav-item">
+                                    <a class="nav-link active" id="login-tab" data-toggle="tab" href="{{ login_url }}" role="tab" aria-controls="home" aria-selected="true">Вход</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="registration-tab" data-toggle="tab" href="{{ signup_url }}" role="link" aria-controls="profile" aria-selected="false">Регистрация</a>
+                                </li>
+                            </ul>
+                                <div class="tab-pane fade show" id="login-tab" role="tabpanel" aria-labelledby="profile-tab">
+                                    <h3  class="register-heading">Вход</h3>
+                                    <div class="row register-form">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                {{ form| crispy }}
+                                            </div>
+                                            <input type="submit" class="btnRegister"  value="Вход"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    </form>
+</body>
+</html>

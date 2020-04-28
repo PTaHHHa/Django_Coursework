@@ -30,10 +30,11 @@ class DateInput(forms.DateInput):
 
 
 class BasicForm(forms.ModelForm):
+
     class Meta:
         model = Profile
         widgets = {'birth_date': DateInput, 'data_vidachi': DateInput, 'sex': forms.RadioSelect,
-                   'passport_series': forms.TextInput(attrs={'pattern': '[a-zA-Zа-яА-Я]+'}),
+                   'passport_series': forms.TextInput(attrs={'pattern': '[a-zA-Zа-яА-Я]+',  'style': 'max-width: 12em'}),
                    'first_name': forms.TextInput(attrs={'pattern': '[-a-zA-Zа-яА-Я]+'}),
                    'last_name': forms.TextInput(attrs={'pattern': '[-a-zA-Zа-яА-Я]+'}),
                    'middle_name': forms.TextInput(attrs={'pattern': '[-a-zA-Zа-яА-Я]+'}),
