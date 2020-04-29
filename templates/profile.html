@@ -9,14 +9,19 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
     <link href="{% static "css/user_profile.css" %}" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="/static/css/main.css">
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
 <body>
 {% if request.user.profile.first_name == None %}
-    <p class="proile-rating">Looks like you don't have an account</p>
+    <div class="container">
+    <div class="test">
+    <h1 class="proile-rating">Похоже у вас нет аккаунта</h1><br>
     <div class="col-md-2">
-        <a href="{% url 'update'%}" class="btn btn-primary btn-lg enabled" role="button" aria-disabled="true">Create now!</a>
+        <a href="{% url 'update'%}" id="test" class="login100-form-btn" role="button" aria-disabled="true">Создайте его!</a>
+        </div>
+    </div>
     </div>
 {% else %}
     <div class="container emp-profile">
@@ -66,9 +71,9 @@
                         </div>
                     </div>
                     <div class="col-md-2">
-                        <a href="{% url 'update'%}" class="btn btn-primary enabled" role="button" aria-disabled="true">Редактировать</a><br>
-                        <a href="{% url 'account_logout'%}" class="btn btn-primary enabled" role="button" aria-disabled="true">Выход</a>
-                        <a href="{% url 'delete'%}" class="btn btn-primary enabled" role="button" aria-disabled="true">Удалить аккаунт</a>
+                        <a href="{% url 'update'%}" class="login100-form-btn" role="button" aria-disabled="true">Редактировать</a><br>
+                        <a href="{% url 'account_logout'%}" class="login100-form-btn" role="button" aria-disabled="true">Выход</a><br>
+                        <a href="{% url 'delete'%}" id="red" class="login100-form-btn" role="button" aria-disabled="true">Удалить аккаунт</a>
                     </div>
                 </div>
                 <div class="row">

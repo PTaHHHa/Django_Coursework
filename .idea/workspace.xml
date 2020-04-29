@@ -26,10 +26,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="44d71a1a-eea2-49a2-ac86-eaa40d50ef7f" name="Default Changelist" comment="profile fix">
-      <change afterPath="$PROJECT_DIR$/media/profile_pictures/iphone360_18131.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/util.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bank/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Bank/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bank/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Bank/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coursework/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/coursework/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/user_profile.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/user_profile.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/account/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/account/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/account/signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/account/signup.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/deposit_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/deposit_form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/update_profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/update_profile.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +58,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="E_branch" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -81,7 +89,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/media/profile_pictures" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/static/css" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -91,16 +99,21 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\IT HYPE\PycharmProjects\coursework\media" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\sorok\PycharmProjects\Django_Coursework\static\css" />
       <recent name="C:\Users\sorok\PycharmProjects\Django_Coursework\media\profile_pictures" />
       <recent name="C:\Users\sorok\PycharmProjects\Django_Coursework\templates" />
       <recent name="C:\Users\IT HYPE\PycharmProjects\coursework\static\css" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\sorok\PycharmProjects\Django_Coursework\static" />
+      <recent name="C:\Users\IT HYPE\PycharmProjects\coursework\media" />
+    </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JavaScript Debug.deposit_form.html">
+    <configuration name="deposit_form.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Django_Coursework/templates/deposit_form.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
     <configuration name="coursework" type="Python.DjangoServer" factoryName="Django server">
       <module name="coursework" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -125,6 +138,11 @@
       <option name="customRunCommand" value="" />
       <method v="2" />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.deposit_form.html" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -329,22 +347,22 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="452" y="223" key="Git.Interactive.Rebase.Dialog/0.0.1920.1080@0.0.1920.1080" timestamp="1586977275345" />
-    <state width="1877" height="287" key="GridCell.Tab.0.bottom" timestamp="1588158268867">
+    <state width="1877" height="287" key="GridCell.Tab.0.bottom" timestamp="1588176057735">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="287" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1588158268867" />
-    <state width="1877" height="287" key="GridCell.Tab.0.center" timestamp="1588158268866">
+    <state width="1877" height="287" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1588176057735" />
+    <state width="1877" height="287" key="GridCell.Tab.0.center" timestamp="1588176057734">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="287" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1588158268866" />
-    <state width="1877" height="287" key="GridCell.Tab.0.left" timestamp="1588158268866">
+    <state width="1877" height="287" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1588176057734" />
+    <state width="1877" height="287" key="GridCell.Tab.0.left" timestamp="1588176057734">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="287" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1588158268866" />
-    <state width="1877" height="287" key="GridCell.Tab.0.right" timestamp="1588158268866">
+    <state width="1877" height="287" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1588176057734" />
+    <state width="1877" height="287" key="GridCell.Tab.0.right" timestamp="1588176057735">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="287" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1588158268866" />
+    <state width="1877" height="287" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1588176057735" />
     <state width="209" height="539" key="HiddenNamespacesPopup" timestamp="1586878857005">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -369,10 +387,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="762" y="450" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1080@0.0.1920.1080" timestamp="1587219953482" />
-    <state x="674" y="118" width="571" height="843" key="find.popup" timestamp="1587478554877">
+    <state x="674" y="118" width="571" height="843" key="find.popup" timestamp="1588175385915">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="674" y="118" width="571" height="843" key="find.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1587478554877" />
+    <state x="674" y="118" width="571" height="843" key="find.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1588175385915" />
     <state x="724" y="171" key="git4idea.branch.GitSmartOperationDialog" timestamp="1586977239267">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>

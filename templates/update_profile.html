@@ -1,17 +1,244 @@
+{% load crispy_forms_tags %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+            integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+            crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="/static/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/util.css">
     <meta charset="UTF-8">
     <title>Title</title>
+
 </head>
 <body>
-    <form method="post" enctype="multipart/form-data">{% csrf_token%}
-        <table border="1">
-            {{ form.as_table }}
-        </table>
-        <button type="submit">POST</button>
-    </form>
+<div class="container-login100" style="background-image: url('/static/images/bg-01.jpg');">
+<form class="well form-horizontal" method="post" enctype="multipart/form-data" id="contact_form"> {% csrf_token %}
+    <fieldset>
+
+        <!-- Form Name -->
+        <legend>
+            <center><h2><b>Заполните личную информацию</b></h2></center>
+        </legend>
+        <br>
+
+        <!-- Text input-->
+
+        <div class="form-group">
+            <div class="col-md-4 inputGroupContainer">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                    {{ form.first_name | as_crispy_field }}
+                </div>
+            </div>
+        </div>
+
+        <!-- Text input-->
+
+        <div class="form-group">
+            <div class="col-md-4 inputGroupContainer">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                    {{ form.last_name | as_crispy_field }}
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-4 inputGroupContainer">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                    {{ form.otchestvo | as_crispy_field }}
+                </div>
+            </div>
+        </div>
+
+        <!-- Text input-->
+
+        <div class="form-group">
+            <div class="col-md-4 inputGroupContainer">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                    {{ form.birth_date | as_crispy_field }}
+                </div>
+            </div>
+        </div>
+
+        <!-- Text input-->
+
+        <div class="form-group">
+            <div class="col-md-4 inputGroupContainer">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                    {{ form.seria_pasporta | as_crispy_field }}
+                </div>
+            </div>
+        </div>
+
+        <!-- Text input-->
+
+        <div class="form-group">
+            <div class="col-md-4 inputGroupContainer">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                    {{ form.passport_number | as_crispy_field }}
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-4 inputGroupContainer">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                    {{ form.kem_vidan | as_crispy_field }}
+                </div>
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            <div class="col-md-4 inputGroupContainer">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                    {{ form.data_vidachi | as_crispy_field }}
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-4 inputGroupContainer">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                    {{ form.ID_number | as_crispy_field }}
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-4 inputGroupContainer">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                    {{ form.birth_place | as_crispy_field }}
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-4 inputGroupContainer">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                    {{ form.city_projivaniya | as_crispy_field }}
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-4 inputGroupContainer">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                    {{ form.address_projivaniya | as_crispy_field }}
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-4 inputGroupContainer">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                    {{ form.mobile_phone | as_crispy_field }}
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-4 inputGroupContainer">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                    {{ form.job | as_crispy_field }}
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-4 inputGroupContainer">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                    {{ form.position | as_crispy_field }}
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-4 inputGroupContainer">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                    {{ form.citizenship | as_crispy_field }}
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-4 inputGroupContainer">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                    {{ form.family | as_crispy_field }}
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-4 inputGroupContainer">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                    {{ form.invalid | as_crispy_field }}
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-4 inputGroupContainer">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                    {{ form.pensioner | as_crispy_field }}
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-4 inputGroupContainer">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                    {{ form.voenoobyazaniy | as_crispy_field }}
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-4 inputGroupContainer">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                    {{ form.sex | as_crispy_field }}
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-4 inputGroupContainer">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                    {{ form.profile_picture | as_crispy_field }}
+                </div>
+            </div>
+        </div>
+        <div class="btn">
+            <button type="submit" class="btn btn-primary enabled">SUBMIT</button>
+        </div>
+
+    </fieldset>
+</form>
+</div>
+</div><!-- /.container -->
 </body>
 </html>

@@ -28,10 +28,10 @@ def update_profile(request):
             if form.is_valid():
                 form.save()
                 image.save()
-                messages.success(request, f'Your account has been updated')
+                messages.success(request, f'Информация была обновлена')
                 return redirect('profile')
     else:
-        messages.error(request, 'You should login first')
+        messages.error(request, 'Необходимо войти в аккаунт')
         return redirect('index')
     return render(request, "../templates/update_profile.html", {'form': form})
 
@@ -50,7 +50,7 @@ def delete_profile(request):
     b = Profile.objects.get(user=request.user)
     b.delete()
     logout(request)
-    messages.success(request, 'Account was successfully deleted')
+    messages.success(request, 'Аккаунт удалён успешно')
     return render(request, '../templates/base.html')
 
 
@@ -66,7 +66,7 @@ def account_profile(request):
             account = AccountForm()
             return render(request, "../templates/account_profile.html", {'account': account})
     else:
-        messages.error(request, 'You should login first')
+        messages.error(request, 'Необходимо войти в аккаунт')
         return redirect('index')
 
 
@@ -81,17 +81,17 @@ def deposit(request):
                 account_value_object = getattr(account_object, 'current_balance')
                 deposit_value_object = deposit_form.cleaned_data['deposit_value']
                 if deposit_value_object < 100:
-                    messages.error(request, 'Minimal deposit value 100 руб.')
+                    messages.error(request, 'Минимальная сумма вклада 100 руб.')
                     return redirect('profile')
                 elif deposit_value_object > account_value_object:
-                    messages.error(request, "You don't have enough money to make a deposit!")
+                    messages.error(request, "Недостаточно средств!")
                     return redirect('profile')
                 else:
                     deposit_form.save()
                     account_object.current_balance = account_value_object - deposit_value_object
                     account_object.save()
 
-                    messages.success(request, 'Deposit created')
+                    messages.success(request, 'Вклад открыт!')
 
                     deposit_creating_time = date.today()
                     Deposits.objects.update(deposit_creating_date=deposit_creating_time)
@@ -125,7 +125,7 @@ def deposit(request):
             deposit_form = DepositForm()
             return render(request, "../templates/deposit_form.html", {'deposit_form': deposit_form})
     else:
-        messages.error(request, 'You should login first')
+        messages.error(request, 'Необходимо войти в аккаунт')
         return redirect('index')
 
 
