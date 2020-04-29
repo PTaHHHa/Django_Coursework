@@ -20,19 +20,17 @@
       <path>
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
         <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="BRANCH:master" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:E_branch" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </select>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="44d71a1a-eea2-49a2-ac86-eaa40d50ef7f" name="Default Changelist" comment="profile fix">
+      <change afterPath="$PROJECT_DIR$/static/css/signup.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bank/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/Bank/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bank/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/Bank/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bank/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Bank/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bank/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Bank/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coursework/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/coursework/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/account/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/account/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/account/signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/account/signup.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,6 +45,7 @@
       <list>
         <option value="Python Script" />
         <option value="HTML File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -85,6 +84,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/media/profile_pictures" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -284,7 +284,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="master" />
+                        <option value="E_branch" />
                       </list>
                     </value>
                   </entry>
@@ -358,22 +358,22 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="452" y="223" key="Git.Interactive.Rebase.Dialog/0.0.1920.1080@0.0.1920.1080" timestamp="1586977275345" />
-    <state width="1877" height="287" key="GridCell.Tab.0.bottom" timestamp="1587664570967">
+    <state width="1877" height="287" key="GridCell.Tab.0.bottom" timestamp="1588163390717">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="287" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1587664570967" />
-    <state width="1877" height="287" key="GridCell.Tab.0.center" timestamp="1587664570967">
+    <state width="1877" height="287" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1588163390717" />
+    <state width="1877" height="287" key="GridCell.Tab.0.center" timestamp="1588163390717">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="287" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1587664570967" />
-    <state width="1877" height="287" key="GridCell.Tab.0.left" timestamp="1587664570967">
+    <state width="1877" height="287" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1588163390717" />
+    <state width="1877" height="287" key="GridCell.Tab.0.left" timestamp="1588163390717">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="287" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1587664570967" />
-    <state width="1877" height="287" key="GridCell.Tab.0.right" timestamp="1587664570967">
+    <state width="1877" height="287" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1588163390717" />
+    <state width="1877" height="287" key="GridCell.Tab.0.right" timestamp="1588163390717">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="287" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1587664570967" />
+    <state width="1877" height="287" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1588163390717" />
     <state width="209" height="539" key="HiddenNamespacesPopup" timestamp="1586878857005">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
