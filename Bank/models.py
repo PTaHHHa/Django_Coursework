@@ -75,6 +75,7 @@ class Profile(models.Model):
         return str(self.user.profile.last_name + " " + self.user.profile.first_name)
 
     class Meta:
+        verbose_name_plural = 'Профили'
         ordering = ['last_name', 'first_name']
 
 
@@ -82,7 +83,7 @@ class City(models.Model):
     city = models.CharField(max_length=60, unique=False, blank=False, verbose_name='Город')
 
     class Meta:
-        verbose_name_plural = "Cities"
+        verbose_name_plural = "Города"
 
     def __str__(self):
         return self.city
@@ -92,7 +93,7 @@ class Citizenship(models.Model):
     citizenship = models.CharField(max_length=60, unique=False, blank=False, verbose_name='Гражданство')
 
     class Meta:
-        verbose_name_plural = "Citizenship"
+        verbose_name_plural = "Гражданство"
 
     def __str__(self):
         return self.citizenship
@@ -105,6 +106,9 @@ class Account(models.Model):
 
     def __str__(self):
         return str(self.profile.last_name + " " + self.profile.first_name)
+
+    class Meta:
+        verbose_name_plural = 'Счета пользователей'
 
 
 class Deposits(models.Model):
@@ -122,20 +126,25 @@ class Deposits(models.Model):
     deposit_type = models.CharField(max_length=900, choices=DEPOSIT_TYPE, null=False, default=0, verbose_name='Тип депозита')
     deposit_value = models.IntegerField(blank=False, unique=False, default=0, null=False, verbose_name='Сумма депозита')
     temporary_deposit_income = models.DecimalField(max_digits=10, decimal_places=2,
-                                                   blank=False, unique=False, default=0, null=True, editable=False)
+                                                   blank=False, unique=False, default=0, null=True, editable=False,
+                                                   verbose_name='Доход от вклада')
     temporary_total_income = models.DecimalField(max_digits=10, decimal_places=2,
-                                                 blank=False, unique=False, default=0, null=True, editable=False)
+                                                 blank=False, unique=False, default=0, null=True, editable=False
+                                                 , verbose_name='Сумма в конце срока')
     deposit_income = models.DecimalField(max_digits=10, decimal_places=2,
                                          blank=False, unique=False, default=0, null=False, editable=False)
     total_income = models.DecimalField(max_digits=10, decimal_places=2,
                                        blank=False, unique=False, default=0, null=False, editable=False)
-    deposit_creating_date = models.DateField(blank=False, default=datetime.date.today, editable=False)
-    deposit_end_date = models.DateField(blank=False, default=datetime.date.today, editable=False)
+    deposit_creating_date = models.DateField(blank=False, default=datetime.date.today, editable=False
+                                             , verbose_name='Дата открытия вклада')
+    deposit_end_date = models.DateField(blank=False, default=datetime.date.today, editable=False
+                                        , verbose_name='Дата закрытия вклада')
     tax_rate = models.DecimalField(max_digits=4, decimal_places=2,
-                                   blank=False, unique=False, default=0, null=False, editable=False)
+                                   blank=False, unique=False, default=0, null=False, editable=False
+                                   , verbose_name='Налог')
 
     class Meta:
-        verbose_name_plural = "Deposits"
+        verbose_name_plural = "Вклады пользователей "
 
     def __str__(self):
         return str(self.profile.last_name + " " + self.profile.first_name)

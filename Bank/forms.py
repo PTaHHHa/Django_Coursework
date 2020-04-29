@@ -88,3 +88,5 @@ class AccountAdmin(admin.ModelAdmin):
 
 class DepositAdmin(admin.ModelAdmin):
     form = DepositForm
+    readonly_fields = ('temporary_deposit_income', 'temporary_total_income', 'tax_rate',
+                       'deposit_creating_date', 'deposit_end_date')
