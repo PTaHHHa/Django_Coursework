@@ -74,7 +74,10 @@ class Profile(models.Model):
             img.save(self.profile_picture.path)
 
     def __str__(self):
-        return str(self.user.last_name + " " + self.user.first_name)
+        try:
+            return str(self.user.profile.last_name + " " + self.user.profile.first_name)
+        except TypeError:
+            return str(self.user.last_name + " " + self.user.first_name)
 
     class Meta:
         ordering = ['last_name', 'first_name']
