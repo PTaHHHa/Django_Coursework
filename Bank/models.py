@@ -48,8 +48,8 @@ class Profile(models.Model):
     address_projivaniya = models.CharField(max_length=100, unique=False,
                                            blank=False, null=True, verbose_name='Адрес проживания')
     mobile_phone = models.CharField(max_length=20, unique=True, blank=False, null=True, verbose_name='Моб. тел.')
-    job = models.CharField(max_length=20, unique=True, blank=False, null=True, verbose_name='Место работы')
-    position = models.CharField(max_length=20, unique=True, blank=False, null=True, verbose_name='Должность')
+    job = models.CharField(max_length=100, unique=True, blank=False, null=True, verbose_name='Место работы')
+    position = models.CharField(max_length=100, unique=True, blank=False, null=True, verbose_name='Должность')
     citizenship = models.ForeignKey('Citizenship', on_delete=models.CASCADE, null=False, default=1, verbose_name='Гражданство')
     family = models.CharField(max_length=9999, choices=FAMILY_CHOICES, null=False, default="неопределено", verbose_name='Семейное положение')
 

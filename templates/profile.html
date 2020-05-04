@@ -45,19 +45,15 @@
                     </div>
                     <div class="col-md-6">
                         <div class="profile-head">
-                            <h6>
-                                <p>{{request.user.profile.last_name}} {{request.user.profile.first_name}} {{request.user.profile.otchestvo}}</p>
-                            </h6>
-                            <h6>
+                            <label >{{request.user.profile.last_name}} {{request.user.profile.first_name}} {{request.user.profile.otchestvo}}</label>
                                 {% if request.user.profile.sex == False %}
-                                    <p>Женщина</p>
+                                   <p></p> <label>Женщина</label>
                                 {% else %}
                                     <p>Мужчина</p>
                                 {% endif %}
 
-                                <p>{{request.user.profile.family}}</p>
-                            </h6>
-                                <p class="proile-rating">Дата рождения : <span>{{ request.user.profile.birth_date}}</span></p>
+                                <p></p><label>{{request.user.profile.family}}</label>
+                                <p></p><label class="proile-rating">Дата рождения : <label>{{ request.user.profile.birth_date}}</label></label>
                             <ul class="nav nav-tabs" id="myTab" role="tablist">
                                 <li class="nav-item">
                                     <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Личная информация</a>

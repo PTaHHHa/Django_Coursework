@@ -31,7 +31,7 @@
 <body>
 
 	<div class="limiter">
-		<div class="container-login100" style="background-image: url('/static/images/bg-01.jpg');">
+		<div class="container-login100" style="background-image: url('/media/unnamed.jpg');">
 			<div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54">
 				<form class="login100-form validate-form" method="POST" action="{% url 'account_signup' %}">{% csrf_token %}
 					<span class="login100-form-title p-b-49">
@@ -39,7 +39,7 @@
 					</span>
 
                         {{ form | crispy }}
-
+<br/>
 					<div class="container-login100-form-btn">
 						<div class="wrap-login100-form-btn">
 							<div class="login100-form-bgbtn"></div>

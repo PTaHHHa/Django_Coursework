@@ -1,42 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <title>{% block head_title %}{% endblock %}</title>
-    {% block extra_head %}
-    {% endblock %}
-  </head>
-  <body>
-    {% block body %}
+<head>
+    <title>Главная страница</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--===============================================================================================-->
+    <link rel="icon" type="image/png" href="/static/css/main_page/images/icons/favicon.ico"/>
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/static/css/main_page/vendor/bootstrap/css/bootstrap.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css"
+          href="/static/css/main_page/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/static/css/main_page/fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/static/css/main_page/vendor/animate/animate.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/static/css/main_page/vendor/css-hamburgers/hamburgers.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/static/css/main_page/vendor/animsition/css/animsition.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/static/css/main_page/vendor/select2/select2.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/static/css/main_page/vendor/daterangepicker/daterangepicker.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/static/css/main_page/css/util.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/main_page/css/main.css">
+    <!--===============================================================================================-->
+</head>
+<body style="background-color: #666666;">
 
-    {% if messages %}
-    <div>
-      <strong>Сообщение:</strong>
-      <ul>
-        {% for message in messages %}
-        <li>{{message}}</li>
-        {% endfor %}
-      </ul>
+<div class="limiter">
+    <div class="container-login100">
+        <div class="wrap-login100">
+            <form class="login100-form validate-form">
+					<span class="login100-form-title p-b-43">
+						<img src="/media/logo_8marta.png">
+					</span>
+                {% if user.is_authenticated %}
+                    <div class="button-container">
+                        <div class="container-login100-form-btn">
+                            <button class="login100-form-btn">
+                                <a class="login100-form-btn" href="{% url 'account_logout' %}" type="button">Выход</a>
+                            </button>
+                        </div>
+
+                        <div class="container-login100-form-btn">
+                            <button class="login100-form-btn">
+                                <a class="login100-form-btn" href="{% url 'profile' %}" type="button">Профиль
+                                    пользователя</a>
+                            </button>
+                        </div>
+                    </div>
+                {% else %}
+                    <div class="button-container">
+                        <div class="container-login100-form-btn">
+                            <button class="login100-form-btn">
+                                <a class="login100-form-btn" href="{% url 'account_login' %}" type="button">Войти</a>
+                            </button>
+                        </div>
+                        <br/>
+                        <div class="container-login100-form-btn">
+                            <button class="login100-form-btn">
+                                <a class="login100-form-btn" href="{% url 'account_signup' %}"
+                                   type="button">Регистрация</a>
+                            </button>
+                        </div>
+                    </div>
+                {% endif %}
+            </form>
+
+            <div class="login100-more" style="background-image: url('/media/unnamed.jpg');">
+            </div>
+        </div>
     </div>
-    {% endif %}
+</div>
 
-    <div class="container">
-      <ul>
-        {% if user.is_authenticated %}
-        <li><a href="{% url 'account_logout' %}">Выход</a></li>
-            <li><a href="{% url 'profile' %}">Профиль пользователя {{ request.user.username }}</a> </li>
-
-        {% else %}
-        <li><a href="{% url 'account_login' %}">Войти</a></li>
-        <li><a href="{% url 'account_signup' %}">Регистрация</a></li>
-        {% endif %}
-      </ul>
-    </div>
-    {% block content %}
-    {% endblock %}
-    {% endblock %}
-    {% block extra_body %}
-    {% endblock %}
-  </body>
+<style>
+    .button-container{
+        padding-top: 150px;
+    }
+    .login100-form-btn {
+        background-color: darkorange;
+        color: black;
+    }
+</style>
+</body>
 </html>

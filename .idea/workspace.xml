@@ -25,7 +25,18 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="44d71a1a-eea2-49a2-ac86-eaa40d50ef7f" name="Default Changelist" comment="profile fix" />
+    <list default="true" id="44d71a1a-eea2-49a2-ac86-eaa40d50ef7f" name="Default Changelist" comment="profile fix">
+      <change afterPath="$PROJECT_DIR$/media/logo_8marta.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/profile_pictures/RTQh3BQRqws.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/unnamed.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bank/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Bank/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/account/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/account/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/account/signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/account/signup.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/profile.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -76,7 +87,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/static/css" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/static/images" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -86,15 +97,19 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\sorok\PycharmProjects\Django_Coursework\media" />
+      <recent name="C:\Users\sorok\PycharmProjects\Django_Coursework\static\css\main_page\images" />
+      <recent name="C:\Users\sorok\PycharmProjects\Django_Coursework\static\css\main_page" />
+      <recent name="C:\Users\sorok\PycharmProjects\Django_Coursework\static" />
+      <recent name="C:\Users\IT HYPE\PycharmProjects\coursework\media" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\sorok\PycharmProjects\Django_Coursework\static\images" />
+      <recent name="C:\Users\sorok\PycharmProjects\Django_Coursework\media" />
       <recent name="C:\Users\sorok\PycharmProjects\Django_Coursework\static\css" />
       <recent name="C:\Users\sorok\PycharmProjects\Django_Coursework\media\profile_pictures" />
       <recent name="C:\Users\sorok\PycharmProjects\Django_Coursework\templates" />
-      <recent name="C:\Users\IT HYPE\PycharmProjects\coursework\static\css" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\sorok\PycharmProjects\Django_Coursework\static" />
-      <recent name="C:\Users\IT HYPE\PycharmProjects\coursework\media" />
     </key>
   </component>
   <component name="RunManager" selected="Django Server.coursework">
@@ -334,22 +349,22 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="452" y="223" key="Git.Interactive.Rebase.Dialog/0.0.1920.1080@0.0.1920.1080" timestamp="1586977275345" />
-    <state width="1877" height="287" key="GridCell.Tab.0.bottom" timestamp="1588176057735">
+    <state width="1877" height="287" key="GridCell.Tab.0.bottom" timestamp="1588614240279">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="287" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1588176057735" />
-    <state width="1877" height="287" key="GridCell.Tab.0.center" timestamp="1588176057734">
+    <state width="1877" height="287" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1588614240279" />
+    <state width="1877" height="287" key="GridCell.Tab.0.center" timestamp="1588614240279">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="287" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1588176057734" />
-    <state width="1877" height="287" key="GridCell.Tab.0.left" timestamp="1588176057734">
+    <state width="1877" height="287" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1588614240279" />
+    <state width="1877" height="287" key="GridCell.Tab.0.left" timestamp="1588614240279">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="287" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1588176057734" />
-    <state width="1877" height="287" key="GridCell.Tab.0.right" timestamp="1588176057735">
+    <state width="1877" height="287" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1588614240279" />
+    <state width="1877" height="287" key="GridCell.Tab.0.right" timestamp="1588614240279">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="287" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1588176057735" />
+    <state width="1877" height="287" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1588614240279" />
     <state width="209" height="539" key="HiddenNamespacesPopup" timestamp="1586878857005">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
