@@ -1,26 +1,29 @@
+import datetime
+from datetime import date
+
 from django.contrib import admin
 from Bank.models import Profile, Deposits, Account
 from django import forms
 from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.admin import UserAdmin
+from django.contrib import messages
 
 
 class UserCreateForm(UserCreationForm):
-
     class Meta:
         model = User
-        fields = ('username', 'first_name', 'last_name', )
+        fields = ('username', 'first_name', 'last_name',)
 
 
 class UserAdmin(UserAdmin):
     add_form = UserCreateForm
-    prepopulated_fields = {'username': ('first_name' , 'last_name', )}
+    prepopulated_fields = {'username': ('first_name', 'last_name',)}
 
     add_fieldsets = (
         (None, {
             'classes': ('wide',),
-            'fields': ('first_name', 'last_name', 'username', 'password1', 'password2', ),
+            'fields': ('first_name', 'last_name', 'username', 'password1', 'password2',),
         }),
     )
 
@@ -30,11 +33,10 @@ class DateInput(forms.DateInput):
 
 
 class BasicForm(forms.ModelForm):
-
     class Meta:
         model = Profile
         widgets = {'birth_date': DateInput, 'data_vidachi': DateInput, 'sex': forms.RadioSelect,
-                   'passport_series': forms.TextInput(attrs={'pattern': '[a-zA-Zа-яА-Я]+',  'style': 'max-width: 12em'}),
+                   'passport_series': forms.TextInput(attrs={'pattern': '[a-zA-Zа-яА-Я]+', 'style': 'max-width: 12em'}),
                    'first_name': forms.TextInput(attrs={'pattern': '[-a-zA-Zа-яА-Я]+'}),
                    'last_name': forms.TextInput(attrs={'pattern': '[-a-zA-Zа-яА-Я]+'}),
                    'middle_name': forms.TextInput(attrs={'pattern': '[-a-zA-Zа-яА-Я]+'}),
@@ -88,6 +90,7 @@ class AccountAdmin(admin.ModelAdmin):
 
 
 class DepositAdmin(admin.ModelAdmin):
-    readonly_fields = ('temporary_deposit_income', 'temporary_total_income', 'tax_rate',
-                      'deposit_creating_date', 'deposit_end_date')
+    readonly_fields = ('temporary_deposit_income', 'total_income_property', 'tax_rate_property',
+                       'deposit_creating_date', 'deposit_end_date_property', 'percentage_property', 'days_property',)
     form = DepositForm
+

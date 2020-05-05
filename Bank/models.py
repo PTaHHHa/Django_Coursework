@@ -123,8 +123,8 @@ class Deposits(models.Model):
         ("под 12.8% на 185 дней", "под 12.8% на 185 дней"),
         ("под 13% на 275 дней", "под 13% на 275 дней"),
         ("под 13.2% на 385 дней", "под 13.2% на 385 дней"),
-        ("под 12.8% на 550 дней", "под 12.8% на 550 дней"),
-        ("под 12.5% на 735 дней", "под 11% на 735 дней"),
+        ("под 12.6% на 550 дней", "под 12.6% на 550 дней"),
+        ("под 13% на 735 дней", "под 13% на 735 дней"),
     )
 
     profile = models.OneToOneField(Profile, on_delete=models.CASCADE)
@@ -143,11 +143,144 @@ class Deposits(models.Model):
                                        blank=False, unique=False, default=0, null=False, editable=False)
     deposit_creating_date = models.DateField(blank=False, default=datetime.date.today, editable=False
                                              , verbose_name='Дата открытия вклада')
-    deposit_end_date = models.DateField(blank=False, default=datetime.date.today,
-                                        editable=False, verbose_name='Дата закрытия вклада')
+    deposit_end_date = models.DateField(blank=False, default=datetime.date.today, editable=False,
+                                        verbose_name='Дата закрытия вклада')
     tax_rate = models.DecimalField(max_digits=4, decimal_places=2,
                                    blank=False, unique=False, default=0, null=False, editable=False
                                    , verbose_name='Налог')
+    percentage = models.DecimalField(max_digits=4, decimal_places=2,
+                                     blank=False, unique=False, default=0, null=False, editable=False
+                                     , verbose_name='Проценты')
+    deposit_days = models.IntegerField(blank=False, unique=False, default=0, null=False, editable=False, verbose_name='Срок вклада в днях')
+
+    def count_deposit_end_date(self):
+        if self.deposit_type == Deposits.DEPOSIT_TYPE[0][0]:
+            end_date = self.deposit_creating_date + datetime.timedelta(days=95)
+            Deposits.objects.update(deposit_end_date=end_date)
+            return end_date
+        elif self.deposit_type == Deposits.DEPOSIT_TYPE[1][0]:
+            end_date = self.deposit_creating_date + datetime.timedelta(days=125)
+            Deposits.objects.update(deposit_end_date=end_date)
+            return end_date
+        elif self.deposit_type == Deposits.DEPOSIT_TYPE[2][0]:
+            end_date = self.deposit_creating_date + datetime.timedelta(days=185)
+            Deposits.objects.update(deposit_end_date=end_date)
+            return end_date
+        elif self.deposit_type == Deposits.DEPOSIT_TYPE[3][0]:
+            end_date = self.deposit_creating_date + datetime.timedelta(days=275)
+            Deposits.objects.update(deposit_end_date=end_date)
+            return end_date
+        elif self.deposit_type == Deposits.DEPOSIT_TYPE[4][0]:
+            end_date = self.deposit_creating_date + datetime.timedelta(days=385)
+            Deposits.objects.update(deposit_end_date=end_date)
+            return end_date
+        elif self.deposit_type == Deposits.DEPOSIT_TYPE[5][0]:
+            end_date = self.deposit_creating_date + datetime.timedelta(days=550)
+            Deposits.objects.update(deposit_end_date=end_date)
+            return end_date
+        elif self.deposit_type == Deposits.DEPOSIT_TYPE[6][0]:
+            end_date = self.deposit_creating_date + datetime.timedelta(days=735)
+            Deposits.objects.update(deposit_end_date=end_date)
+            return end_date
+
+    count_deposit_end_date.short_description = "Дата закрытия вклада"
+    deposit_end_date_property = property(count_deposit_end_date)
+
+    def count_tax_rate(self):
+        if self.deposit_type == Deposits.DEPOSIT_TYPE[0][0] or self.deposit_type == Deposits.DEPOSIT_TYPE[1][0] or self.deposit_type == Deposits.DEPOSIT_TYPE[2][0] or self.deposit_type == Deposits.DEPOSIT_TYPE[3][0]:
+            Deposits.objects.update(tax_rate=13)
+            return self.tax_rate
+        else:
+            Deposits.objects.update(tax_rate=0)
+            return self.tax_rate
+
+    count_tax_rate.short_description = "Налог"
+    tax_rate_property = property(count_tax_rate)
+
+    def count_percentage(self):
+        if self.deposit_type == Deposits.DEPOSIT_TYPE[0][0]:
+            perc = 11.3
+            Deposits.objects.update(percentage=perc)
+            return perc
+        elif self.deposit_type == Deposits.DEPOSIT_TYPE[1][0]:
+            perc = 11.8
+            Deposits.objects.update(percentage=perc)
+            return perc
+        elif self.deposit_type == Deposits.DEPOSIT_TYPE[2][0]:
+            perc = 12.8
+            Deposits.objects.update(percentage=perc)
+            return perc
+        elif self.deposit_type == Deposits.DEPOSIT_TYPE[3][0]:
+            perc = 13
+            Deposits.objects.update(percentage=perc)
+            return perc
+        elif self.deposit_type == Deposits.DEPOSIT_TYPE[4][0]:
+            perc = 13.2
+            Deposits.objects.update(percentage=perc)
+            return perc
+        elif self.deposit_type == Deposits.DEPOSIT_TYPE[5][0]:
+            perc = 12.6
+            Deposits.objects.update(percentage=perc)
+            return perc
+        elif self.deposit_type == Deposits.DEPOSIT_TYPE[6][0]:
+            perc = 13
+            Deposits.objects.update(percentage=perc)
+            return perc
+
+    count_percentage.short_description = "Проценты"
+    percentage_property = property(count_percentage)
+
+    def count_days(self):
+        if self.deposit_type == Deposits.DEPOSIT_TYPE[0][0]:
+            days = 95
+            Deposits.objects.update(deposit_days=days)
+            return days
+        elif self.deposit_type == Deposits.DEPOSIT_TYPE[1][0]:
+            days = 125
+            Deposits.objects.update(deposit_days=days)
+            return days
+        elif self.deposit_type == Deposits.DEPOSIT_TYPE[2][0]:
+            days = 185
+            Deposits.objects.update(deposit_days=days)
+            return days
+        elif self.deposit_type == Deposits.DEPOSIT_TYPE[3][0]:
+            days = 275
+            Deposits.objects.update(deposit_days=days)
+            return days
+        elif self.deposit_type == Deposits.DEPOSIT_TYPE[4][0]:
+            days = 385
+            Deposits.objects.update(deposit_days=days)
+            return days
+        elif self.deposit_type == Deposits.DEPOSIT_TYPE[5][0]:
+            days = 550
+            Deposits.objects.update(deposit_days=days)
+            return days
+        elif self.deposit_type == Deposits.DEPOSIT_TYPE[6][0]:
+            days = 735
+            Deposits.objects.update(deposit_days=days)
+            return days
+
+    count_days.short_description = "Срок вклада в днях"
+    days_property = property(count_days)
+
+    def count_total_income(self):
+        self.deposit_income_without_tax = self.deposit_value * (self.percentage / 100) * int(self.deposit_days / 365)
+        if self.tax_rate != 0:
+            self.income_with_tax = self.deposit_income_without_tax * self.tax_rate/100
+            total_income = self.deposit_income_without_tax-self.income_with_tax + self.deposit_value
+            Deposits.objects.update(temporary_deposit_income=self.income_with_tax, temporary_total_income=total_income)
+        else:
+            total_income = self.deposit_income_without_tax + self.deposit_value
+            Deposits.objects.update(temporary_deposit_income=self.deposit_income_without_tax,
+                                    temporary_total_income=total_income)
+        if self.deposit_creating_date == self.deposit_end_date:
+            Deposits.objects.update(deposit_income=self.deposit_income_without_tax, total_income=total_income,
+                                    temporary_deposit_income=None, temporary_total_income=None)
+            Account.objects.update(current_balance=(self.deposit_income_without_tax + self.deposit_value))
+        return total_income
+
+    count_total_income.short_description = "Сумма в конце срока"
+    total_income_property = property(count_total_income)
 
     class Meta:
         verbose_name_plural = "Вклады"
