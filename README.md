@@ -1,4 +1,4 @@
-# Django_Coursework
+# Internet banking Django coursework
 
 Web application for Internet banking. There is a possibility to log in/register. The following functions were implemented:
 
